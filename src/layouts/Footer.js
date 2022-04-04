@@ -4,7 +4,7 @@ import { Container, Grid, List, Segment, Header } from "semantic-ui-react";
 export default function Footer() {
   return (
     <div>
-      <Segment vertical style={{ marginTop: "50px" }}>
+      <Segment vertical style={{ marginTop: "50px", marginLeft:"10px" }}>
         <Container>
           <Grid divided stackable>
             <Grid.Row>

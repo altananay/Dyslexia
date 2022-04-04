@@ -1,8 +1,7 @@
 import 'semantic-ui-css/semantic.min.css'
-import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
-
+import React from 'react'
 import Dashboard from './layouts/Dashboard';
+
 
 function App() {
 

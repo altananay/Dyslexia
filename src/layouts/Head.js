@@ -20,18 +20,18 @@ export default function Head() {
         <Grid container stackable verticalAlign="middle">
           <Grid.Row>
             <Grid.Column width={8}>
-              <Header as="h3" style={{ fontSize: "2em" }}>
+              <Header as="h3" style={{ fontSize: "2em", marginLeft: "10px" }}>
                 We Help Companies and Companions
               </Header>
-              <p style={{ fontSize: "1.33em" }}>
+              <p style={{ fontSize: "1.33em", marginLeft: "10px" }}>
                 We can give your company superpowers to do things that they
                 never thought possible. Let us delight your customers and
                 empower your needs... through pure data analytics.
               </p>
-              <Header as="h3" style={{ fontSize: "2em" }}>
+              <Header as="h3" style={{ fontSize: "2em", marginLeft: "10px" }}>
                 We Make Bananas That Can Dance
               </Header>
-              <p style={{ fontSize: "1.33em" }}>
+              <p style={{ fontSize: "1.33em", marginLeft:"10px" }}>
                 Yes that's right, you thought it was the stuff of dreams, but
                 even bananas can be bioengineered.
               </p>
@@ -40,7 +40,7 @@ export default function Head() {
               <Image
                 rounded
                 size="large"
-                src="/kitap.png"
+                src="/kitap.png" style={{marginLeft:"10px"}}
               />
             </Grid.Column>
           </Grid.Row>

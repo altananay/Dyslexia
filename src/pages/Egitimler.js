@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import { Container, Tab } from "semantic-ui-react";
 
 export default function Egitimler() {
   return (
-    <div>Egitimler</div>
-  )
+    <div>
+      <Container text>Egitimler buraya...</Container>
+    </div>
+  );
 }

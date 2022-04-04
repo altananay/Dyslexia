@@ -44,7 +44,7 @@ export default function Iletisim() {
           </GridColumn>
         </GridRow>
       </Grid>
-      <Container text>
+      <Container text style={{marginTop:"20px"}}>
         
         <Formik
           initialValues={initialValues}
@@ -63,7 +63,7 @@ export default function Iletisim() {
             <PTextInput
               name="email"
               placeholder="email"
-              style={{ marginTop: "15px", marginBottom: "15px" }}
+              style={{ marginTop: "15px" }}
             ></PTextInput>
             <PTextArea name="description" placeholder="aciklama"></PTextArea>
             <Button

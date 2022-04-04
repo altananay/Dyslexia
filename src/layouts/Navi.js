@@ -74,10 +74,10 @@ export default class MenuExampleSizeHuge extends Component {
           <Dropdown item text="Diller">
             <Dropdown.Menu>
               <Dropdown.Item>
-                <Flag name="tr"> Türkçe</Flag>
+                <Flag name="tr" style={{fontSize:"14px"}}> Türkçe</Flag>
               </Dropdown.Item>
               <Dropdown.Item>
-                <Flag name="us"> İngilizce</Flag>
+                <Flag name="us" style={{fontSize:"14px"}}> İngilizce</Flag>
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>

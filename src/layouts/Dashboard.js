@@ -8,6 +8,7 @@ import Navi from "./Navi";
 import Anasayfa from "../pages/Anasayfa";
 import Video from "../pages/Video";
 import Iletisim from "../pages/Iletisim";
+import Egitimler from "../pages/Egitimler"
 import { ToastContainer } from "react-toastify";
 import Test from "../pages/Test";
 export default function Dashboard() {
@@ -29,6 +30,11 @@ export default function Dashboard() {
                 exact
                 path="/ekibimiz"
                 element={<Ekibimiz></Ekibimiz>}
+              ></Route>
+              <Route
+                exact
+                path="/egitimler"
+                element={<Egitimler></Egitimler>}
               ></Route>
               
               <Route exact path="/video" element={<Video></Video>}></Route>

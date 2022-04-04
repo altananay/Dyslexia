@@ -14,7 +14,6 @@ import {
 export default function Hakkimizda() {
   return (
     <div>
-      <Icon name="book" size="large" color="green"></Icon>
     <Container textAlign='justified'>
       <b>Justified</b>
       <Divider />
