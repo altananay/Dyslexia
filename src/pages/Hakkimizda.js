@@ -1,5 +1,13 @@
 import React from "react";
-import { Container, Divider, Grid, GridColumn, GridRow, Image, Segment } from 'semantic-ui-react'
+import {
+  Container,
+  Divider,
+  Grid,
+  GridColumn,
+  GridRow,
+  Image,
+  Segment,
+} from "semantic-ui-react";
 export default function () {
   return (
     <div>
@@ -36,17 +44,17 @@ export default function () {
           ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
           ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
         </p>
-        <Segment vertical style={{marginLeft: "70px"}}>
-          <Grid container stackable verticalAlign="middle">
-            <GridRow>
-              <GridColumn>  
-                <Image src="/hakkimizda.png" size="huge"></Image>
-              </GridColumn>
-            </GridRow>
-          </Grid>
-          
-        </Segment>
-        
+        <Container text>
+          <Segment vertical>
+            <Grid container stackable verticalAlign="middle">
+              <GridRow>
+                <GridColumn>
+                  <Image src="/hakkimizda.png" size="huge"></Image>
+                </GridColumn>
+              </GridRow>
+            </Grid>
+          </Segment>
+        </Container>
       </Container>
     </div>
   );
