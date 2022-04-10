@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Tab } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
 
 export default function Egitimler() {
   return (

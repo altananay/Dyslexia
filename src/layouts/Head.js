@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Header, Segment, Image, Grid, GridRow, GridColumn , Container, Divider} from "semantic-ui-react";
 
-const src = "/dyslexia.png";
 
 export default function Head() {
   return (

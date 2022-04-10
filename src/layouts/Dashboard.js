@@ -1,6 +1,6 @@
 import React from "react";
-import { Grid, GridColumn } from "semantic-ui-react";
-import { Route, Router, Routes } from "react-router-dom";
+import { Grid} from "semantic-ui-react";
+import { Route, Routes } from "react-router-dom";
 import Hakkimizda from "../pages/Hakkimizda";
 import Ekibimiz from "../pages/Ekibimiz";
 import NotFound from "../pages/NotFound";

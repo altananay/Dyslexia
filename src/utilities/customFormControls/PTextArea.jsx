@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormField, Input, Label, TextArea } from 'semantic-ui-react'
+import { FormField,  Label, TextArea } from 'semantic-ui-react'
 import { useField } from 'formik'
 
 export default function PTextArea({...props}) {

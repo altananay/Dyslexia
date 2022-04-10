@@ -1,7 +1,7 @@
 import { Form, Formik } from "formik";
 import React from "react";
 import { toast } from "react-toastify";
-import { Button, Container, Header, Segment, Image, Grid, GridRow, GridColumn } from "semantic-ui-react";
+import { Button, Container, Header, Grid, GridRow, GridColumn } from "semantic-ui-react";
 import * as Yup from "yup";
 import PTextArea from "../utilities/customFormControls/PTextArea";
 import PTextInput from "../utilities/customFormControls/PTextInput";
