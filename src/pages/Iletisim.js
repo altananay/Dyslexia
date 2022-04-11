@@ -22,10 +22,6 @@ export default function Iletisim() {
     description: Yup.string().min(20).required("açıklama gereklidir."),
   });
 
-  const handleForm = () => {
-    toast.success("form gönderildi. !");
-  };
-
   return (
     <div>
       <Grid>
@@ -50,7 +46,7 @@ export default function Iletisim() {
           initialValues={initialValues}
           validationSchema={schema}
           onSubmit={(values) => {
-            
+            toast.success("form gönderildi. !");
           }}
         >
           <Form className="ui form">
@@ -69,7 +65,6 @@ export default function Iletisim() {
             <Button
               color="green"
               type="submit"
-              onClick={() => handleForm()}
               style={{ marginTop: "15px" }}
             >
               Gönder

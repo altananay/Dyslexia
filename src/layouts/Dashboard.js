@@ -6,7 +6,6 @@ import Ekibimiz from "../pages/Ekibimiz";
 import NotFound from "../pages/NotFound";
 import Navi from "./Navi";
 import Anasayfa from "../pages/Anasayfa";
-import Video from "../pages/Video";
 import Iletisim from "../pages/Iletisim";
 import Egitimler from "../pages/Egitimler"
 import { ToastContainer } from "react-toastify";
@@ -37,7 +36,6 @@ export default function Dashboard() {
                 element={<Egitimler></Egitimler>}
               ></Route>
               
-              <Route exact path="/video" element={<Video></Video>}></Route>
               <Route exact path="/iletisim" element={<Iletisim></Iletisim>}></Route>
               <Route exact path="/test" element={<Test></Test>}></Route>
               <Route path="*" element={<NotFound></NotFound>}></Route>

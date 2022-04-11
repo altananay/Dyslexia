@@ -47,9 +47,9 @@ export default function Hakkimizda() {
           ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
         </p>
 
-        {/* large screen and tablet */}
-        <Grid columns={4}>
-          <GridRow only="large screen">
+        {/* large screen*/}
+        <Grid stackable columns={4}>
+          <GridRow only="tablet">
             <GridColumn>
               <Card>
                 <Image wrapped ui={false} />
@@ -113,7 +113,7 @@ export default function Hakkimizda() {
               </Card>
             </GridColumn>
           </GridRow>
-          <GridRow only="large screen">
+          <GridRow only="tablet">
             <GridColumn>
               <Card>
                 <Image wrapped ui={false} />
@@ -162,7 +162,7 @@ export default function Hakkimizda() {
               <Card>
                 <Image wrapped ui={false} />
                 <Card.Content>
-                  <Card.Header>Gamze AKMEŞE</Card.Header>
+                  <Card.Header><h4>Gamze AKMEŞE</h4></Card.Header>
                   <Card.Description>
                     Matthew is a musician living in Nashville.
                   </Card.Description>
@@ -289,7 +289,135 @@ export default function Hakkimizda() {
               <Card>
                 <Image wrapped ui={false} />
                 <Card.Content>
-                  <Card.Header>Gamze AKMEŞE</Card.Header>
+                  <Card.Header><h4>Gamze AKMEŞE</h4></Card.Header>
+                  <Card.Description>
+                    Matthew is a musician living in Nashville.
+                  </Card.Description>
+                </Card.Content>
+                <Card.Content extra>
+                  <Icon name="mobile" size="large" color="blue" />
+                </Card.Content>
+              </Card>
+            </GridColumn>
+          </GridRow>
+        </Grid>
+      
+        {/* large screen */}
+        <Grid stackable columns={4}>
+          <GridRow only="large screen">
+            <GridColumn>
+              <Card>
+                <Image wrapped ui={false} />
+                <Card.Content>
+                  <Card.Header>Altan ANAY</Card.Header>
+                  <Card.Description>
+                    Matthew is a musician living in Nashville.
+                  </Card.Description>
+                </Card.Content>
+                <Card.Content extra>
+                  <Icon name="js square" color="yellow" size="large" />
+                  <Icon name="react" color="blue" size="large" />
+                  <Icon name="node" color="green" size="large" />
+                  <Icon name="database" color="red" size="large" />
+                </Card.Content>
+              </Card>
+            </GridColumn>
+            <GridColumn>
+              <Card>
+                <Image wrapped ui={false} />
+                <Card.Content>
+                  <Card.Header>Okan AVCI</Card.Header>
+                  <Card.Description>
+                    Matthew is a musician living in Nashville.
+                  </Card.Description>
+                </Card.Content>
+                <Card.Content extra>
+                  <Icon name="database" color="red" size="large" />
+                  <Icon name="mobile" size="large" color="blue" />
+                </Card.Content>
+              </Card>
+            </GridColumn>
+            <GridColumn>
+              <Card>
+                <Image wrapped ui={false} />
+                <Card.Content>
+                  <Card.Header>Cumhur Utku ATAK</Card.Header>
+                  <Card.Description>
+                    Matthew is a musician living in Nashville.
+                  </Card.Description>
+                </Card.Content>
+                <Card.Content extra>
+                  <Icon name="microsoft" size="large" color="green" />
+                  <Icon name="database" color="red" size="large" />
+                </Card.Content>
+              </Card>
+            </GridColumn>
+            <GridColumn>
+              <Card>
+                <Image wrapped ui={false} />
+                <Card.Content>
+                  <Card.Header>Ahmet Suat DİRAV</Card.Header>
+                  <Card.Description>
+                    Matthew is a musician living in Nashville.
+                  </Card.Description>
+                </Card.Content>
+                <Card.Content extra>
+                  <Icon name="microsoft" size="large" color="green" />
+                  <Icon name="database" color="red" size="large" />
+                </Card.Content>
+              </Card>
+            </GridColumn>
+          </GridRow>
+          <GridRow only="large screen">
+            <GridColumn>
+              <Card>
+                <Image wrapped ui={false} />
+                <Card.Content>
+                  <Card.Header>Berkay ALİŞAN</Card.Header>
+                  <Card.Description>
+                    Matthew is a musician living in Nashville.
+                  </Card.Description>
+                </Card.Content>
+                <Card.Content extra>
+                  <Icon name="mobile" size="large" color="blue" />
+                </Card.Content>
+              </Card>
+            </GridColumn>
+            <GridColumn>
+              <Card>
+                <Image wrapped ui={false} />
+                <Card.Content>
+                  <Card.Header>Yusuf KEÇER</Card.Header>
+                  <Card.Description>
+                    Matthew is a musician living in Nashville.
+                  </Card.Description>
+                </Card.Content>
+                <Card.Content extra>
+                  <Icon name="mobile" size="large" color="blue" />
+                  <Icon name="database" color="red" size="large" />
+                </Card.Content>
+              </Card>
+            </GridColumn>
+            <GridColumn>
+              <Card>
+                <Image wrapped ui={false} />
+                <Card.Content>
+                  <Card.Header>Ayşe BAYAM</Card.Header>
+                  <Card.Description>
+                    Matthew is a musician living in Nashville.
+                  </Card.Description>
+                </Card.Content>
+                <Card.Content extra>
+                  <Icon name="js square" color="yellow" size="large" />
+                  <Icon name="file excel" size="large" color="green" />
+                </Card.Content>
+              </Card>
+            </GridColumn>
+            <GridColumn>
+              <Card>
+                <Image wrapped ui={false} />
+                <Card.Content>
+                  <Card.Header><h4>Gamze Nur AKMEŞE</h4></Card.Header>
                   <Card.Description>
                     Matthew is a musician living in Nashville.
                   </Card.Description>

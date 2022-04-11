@@ -55,11 +55,6 @@ export default class MenuExampleSizeHuge extends Component {
           onClick={this.handleItemClick} href="https://www.suatdirav.com/Home/Index" target="_blank">
           </Menu.Item>
 
-          <Menu.Item name="video"
-          active={activeItem === "video"}
-          onClick={this.handleItemClick} as={NavLink} to="/video">
-          </Menu.Item>
-
           <Menu.Item name="iletisim"
           active={activeItem === "iletisim"}
           onClick={this.handleItemClick} as={NavLink} to="/iletisim">
