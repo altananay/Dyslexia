@@ -2,15 +2,18 @@ import React, { useState } from "react";
 import { Container, Step, Icon, Table, Tab, Button } from "semantic-ui-react";
 import Vinegrad from "./Vinegrad";
 import "../css/Vinegrad.css"
+import Reading from "./Reading";
 
 
 export default function Test({...props}) {
 
   const [showVinegrad, setShowVinegrad] = useState(false);
+  const [showReading, setShowReading] = useState(false);
 
   const isClicked = (clicked) => {
     if (clicked) {
       setShowVinegrad(true);
+      setShowReading(false);
     }
     else
     {
@@ -18,6 +21,16 @@ export default function Test({...props}) {
     }
   }
 
+  const isClicked2 = (clicked) => {
+    if (clicked) {
+      setShowReading(true);
+      setShowVinegrad(false);
+    }
+    else
+    {
+      setShowReading(false);
+    }
+  }
 
   return (
     <div>
@@ -32,11 +45,12 @@ export default function Test({...props}) {
           <Step active>
             <Icon name="book" color="yellow"/>
             <Step.Content>
-              <Step.Title>Okuma Hatası</Step.Title>
+              <Step.Title onClick={()=>isClicked2(true)}>Okuma Hatası</Step.Title>
             </Step.Content>
           </Step>
         </Step.Group>
         {showVinegrad ? <Vinegrad></Vinegrad>  : <div></div>}
+        {showReading ? <Reading></Reading> : <div></div>}
       </Container>
     </div>
   );

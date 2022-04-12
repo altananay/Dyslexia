@@ -1,6 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-export default function () {
+
+export default function Reading() {
   const [showFinalResults, setFinalResults] = useState(false);
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -165,10 +166,11 @@ export default function () {
     setFinalResults(false);
     setScore(0);
   };
+
   return (
     <div>
       <div className="App">
-        <h1>Vinegrad Test</h1>
+        <h1>Okuma Hatası Testi</h1>
 
         <h2>Skor: {score} </h2>
         {showFinalResults ? (
@@ -183,7 +185,7 @@ export default function () {
           <div className="question-card">
             <h2>{currentQuestion + 1}. Soru</h2>
             <h2>Toplam Soru Sayısı: {questions.length}</h2>
-            
+
             <h3 className="question-text">{questions[currentQuestion].text}</h3>
 
             <ul>
@@ -202,6 +204,5 @@ export default function () {
         )}
       </div>
     </div>
-    
   );
 }
