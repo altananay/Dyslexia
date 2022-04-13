@@ -40,7 +40,7 @@ export default function Head() {
               <Image
                 rounded
                 size="large"
-                src="/kitap.png" style={{marginLeft:"10px", marginBottom:"20px"}}
+                src="/logoWhite.jpg" style={{marginLeft:"10px", marginBottom:"20px"}}
               />
             </Grid.Column>
           </Grid.Row>
