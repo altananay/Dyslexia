@@ -14,37 +14,30 @@ export default function Hakkimizda() {
   return (
     <div>
       <Container textAlign="justified">
-        <b>Justified</b>
+        <b>Biz Kimiz</b>
         <Divider />
         <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-          Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-          aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-          imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede link
-          mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
-          semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-          porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante,
-          dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla
-          ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
-          ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+          Pamukkale üniversitesi yönetim bilişim sistemleri 3.sınıf öğrencileri
+          olarak bilime ve teknolojiye gönül veren, yenilikler çok sıkı takip
+          eden ve yaptığımız işi her zaman en iyi şekilde yapma bilinciyle
+          hareket eden bir ekibiz. Edindiğimiz bilgi ve tecrübelerle yazılımı
+          sağlık ve eğitim sektörüne entegre ederek web ve mobil de uygulamalar
+          geliştirmekteyiz.
         </p>
         <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-          Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-          aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-          imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede link
-          mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
-          semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-          porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante,
-          dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla
-          ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
-          ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+          <h3>Misyon</h3>
+          <p>
+            Disleksili bireyler için web ve mobil alanda geliştirdiğimiz
+            uygulamalarla eğitim hayatlarında ve sosyal çevrelerinde yaşadıkları
+            problemlere en aza indirgemek için bir araya geldik.
+          </p>
+          <h3>Vizyon</h3>
+          <p>
+            Yaptığımız uygulamalarla ve verdiğimiz eğitimlerle disleksi alanında
+            etkileşim kurabildiğimiz her insanın hayatına dokunarak yaşadıkları
+            sorunlara çözüm olarak Türkiye’de ve Dünyada öncü bir kuruluş olmak
+            istiyoruz.
+          </p>
         </p>
 
         {/* large screen*/}
@@ -162,7 +155,9 @@ export default function Hakkimizda() {
               <Card>
                 <Image wrapped ui={false} />
                 <Card.Content>
-                  <Card.Header><h4>Gamze AKMEŞE</h4></Card.Header>
+                  <Card.Header>
+                    <h4>Gamze AKMEŞE</h4>
+                  </Card.Header>
                   <Card.Description>
                     Matthew is a musician living in Nashville.
                   </Card.Description>
@@ -178,7 +173,7 @@ export default function Hakkimizda() {
         <Grid columns={2}>
           <GridRow only="mobile">
             <GridColumn>
-              <Card style={{marginBottom: "20px"}}>
+              <Card style={{ marginBottom: "20px" }}>
                 <Image wrapped ui={false} />
                 <Card.Content>
                   <Card.Header>Altan ANAY</Card.Header>
@@ -242,7 +237,7 @@ export default function Hakkimizda() {
           </GridRow>
           <GridRow only="mobile">
             <GridColumn>
-              <Card style={{marginBottom: "20px"}}>
+              <Card style={{ marginBottom: "20px" }}>
                 <Image wrapped ui={false} />
                 <Card.Content>
                   <Card.Header>Berkay ALİŞAN</Card.Header>
@@ -289,7 +284,9 @@ export default function Hakkimizda() {
               <Card>
                 <Image wrapped ui={false} />
                 <Card.Content>
-                  <Card.Header><h4>Gamze AKMEŞE</h4></Card.Header>
+                  <Card.Header>
+                    <h4>Gamze AKMEŞE</h4>
+                  </Card.Header>
                   <Card.Description>
                     Matthew is a musician living in Nashville.
                   </Card.Description>
@@ -301,7 +298,7 @@ export default function Hakkimizda() {
             </GridColumn>
           </GridRow>
         </Grid>
-      
+
         {/* large screen */}
         <Grid stackable columns={4}>
           <GridRow only="large screen">
@@ -417,7 +414,9 @@ export default function Hakkimizda() {
               <Card>
                 <Image wrapped ui={false} />
                 <Card.Content>
-                  <Card.Header><h4>Gamze Nur AKMEŞE</h4></Card.Header>
+                  <Card.Header>
+                    <h4>Gamze Nur AKMEŞE</h4>
+                  </Card.Header>
                   <Card.Description>
                     Matthew is a musician living in Nashville.
                   </Card.Description>
