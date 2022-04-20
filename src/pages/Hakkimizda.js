@@ -36,7 +36,7 @@ export default function () {
           gösterebileceğini yazını başlarında belirtmiştik fakat yaygın olarak
           görülen belirtiler aşağıda maddeler halinde verilmiştir.
         </p>
-        <p>
+        
           <List bulleted>
             <List.Item>Konuşmayı öğrenmede gecikme</List.Item>
             <List.Item>
@@ -56,7 +56,7 @@ export default function () {
               Matematiksel işlemleri yapmada sıkıntı yaşamadır
             </List.Item>
           </List>
-        </p>
+        
         <p>
           Tabi bu belirtilerden bazılarına sahip olan bireyler kesinlikle
           Disleksi’dir diye kesin bir tespit yapılamamakla birlikte bunlara
@@ -68,28 +68,31 @@ export default function () {
           fazla yanlış bilinen veya yayılan bilgiler mevcuttur bunlar;
           <br></br>
           <List bulleted>
-            <List.Item>Disleksili Bireyler ‘Geriye Okuma’ Yaparlar</List.Item>
-            <List.Item>
-              Erkeklerin Kızlara Oranla Disleksi Olma Durumu Fazladır
-            </List.Item>
-            <List.Item>
+              <List.Item>Disleksili Bireyler ‘Geriye Okuma’ Yaparlar</List.Item>
               <List.Item>
-                Sol El Kullananların Disleksili Olma Oranı Daha Fazladır
+                Erkeklerin Kızlara Oranla Disleksi Olma Durumu Fazladır
               </List.Item>
-            </List.Item>
-            <List.Item>
-              Zekâ ile Disleksi Arasında Doğrusal Bir İlişki Vardır
-            </List.Item>
-            <List.Item>
-              Disleksi Toplumlarda Nadir Görülen Bir Durumdur
-            </List.Item>
-            <List.Item>Bir Birey Okuyabiliyorsa O Disleksili Olamaz</List.Item>
-            <List.Item>
-              Okuma Eğitimi Başlamadan Önce Bireydeki Disleksi Teşhis Edilemez
-            </List.Item>
-            <List.Item>
-              Disleksi çocuklarda bulunur, yetişkinlerde bulunmaz
-            </List.Item>
+              <List.Item>
+                <List.Item>
+                  Sol El Kullananların Disleksili Olma Oranı Daha Fazladır
+                </List.Item>
+              </List.Item>
+              <List.Item>
+                Zekâ ile Disleksi Arasında Doğrusal Bir İlişki Vardır
+              </List.Item>
+              <List.Item>
+                Disleksi Toplumlarda Nadir Görülen Bir Durumdur
+              </List.Item>
+              <List.Item>
+                Bir Birey Okuyabiliyorsa O Disleksili Olamaz
+              </List.Item>
+              <List.Item>
+                Okuma Eğitimi Başlamadan Önce Bireydeki Disleksi Teşhis Edilemez
+              </List.Item>
+              <List.Item>
+                Disleksi çocuklarda bulunur, yetişkinlerde bulunmaz
+              </List.Item>
+            
           </List>
         </p>
         <p>

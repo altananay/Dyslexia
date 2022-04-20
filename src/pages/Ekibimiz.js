@@ -17,8 +17,8 @@ export default function Hakkimizda() {
         <b>Biz Kimiz</b>
         <Divider />
         <p>
-          Pamukkale üniversitesi yönetim bilişim sistemleri 3.sınıf öğrencileri
-          olarak bilime ve teknolojiye gönül veren, yenilikler çok sıkı takip
+          Pamukkale Üniversitesi Yönetim Bilişim Sistemleri 3. Sınıf öğrencileri
+          olarak bilime ve teknolojiye gönül veren, yenilikleri çok sıkı takip
           eden ve yaptığımız işi her zaman en iyi şekilde yapma bilinciyle
           hareket eden bir ekibiz. Edindiğimiz bilgi ve tecrübelerle yazılımı
           sağlık ve eğitim sektörüne entegre ederek web ve mobil de uygulamalar

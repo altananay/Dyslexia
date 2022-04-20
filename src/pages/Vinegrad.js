@@ -189,7 +189,7 @@ export default function () {
             <ul>
               {questions[currentQuestion].options.map((option) => {
                 return (
-                  <li
+                  <li className="liste"
                     onClick={() => optionClicked(option.isCorrect)}
                     key={option.id}
                   >

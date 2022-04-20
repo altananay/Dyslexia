@@ -1,7 +1,14 @@
 import { Form, Formik } from "formik";
 import React from "react";
 import { toast } from "react-toastify";
-import { Button, Container, Header, Grid, GridRow, GridColumn } from "semantic-ui-react";
+import {
+  Button,
+  Container,
+  Header,
+  Grid,
+  GridRow,
+  GridColumn,
+} from "semantic-ui-react";
 import * as Yup from "yup";
 import PTextArea from "../utilities/customFormControls/PTextArea";
 import PTextInput from "../utilities/customFormControls/PTextInput";
@@ -27,21 +34,20 @@ export default function Iletisim() {
       <Grid>
         <GridRow>
           <GridColumn width={16}>
-              <Container text textAlign="center">
+            <Container text textAlign="center">
               <Header as="h3" style={{ fontSize: "2em" }}>
-                We Help Companies and Companions
+                Sadece tek bir tık uzağınızdayız.
               </Header>
               <p style={{ fontSize: "1.33em" }}>
-                We can give your company superpowers to do things that they
-                never thought possible. Let us delight your customers and
-                empower your needs... through pure data analytics.
+                Web sitemiz hakkında öneri ve görüşlerinizi bizler ile
+                paylaşmanızdan mutluluk duyuyoruz. <br></br>
+                Öneri, görüşlerinizi bizlere aşağıdan gönderebilirsiniz.
               </p>
-              </Container>
+            </Container>
           </GridColumn>
         </GridRow>
       </Grid>
-      <Container text style={{marginTop:"20px"}}>
-        
+      <Container text style={{ marginTop: "20px" }}>
         <Formik
           initialValues={initialValues}
           validationSchema={schema}
@@ -62,11 +68,7 @@ export default function Iletisim() {
               style={{ marginTop: "15px" }}
             ></PTextInput>
             <PTextArea name="description" placeholder="aciklama"></PTextArea>
-            <Button
-              color="green"
-              type="submit"
-              style={{ marginTop: "15px" }}
-            >
+            <Button color="green" type="submit" style={{ marginTop: "15px" }}>
               Gönder
             </Button>
           </Form>
