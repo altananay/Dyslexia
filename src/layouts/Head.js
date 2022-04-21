@@ -67,7 +67,7 @@ export default function Head() {
         </Grid>
       </Segment>
 
-      <Segment style={{ padding: "0em" }}>
+      <Segment style={{ padding: "0em", backgroundColor: "#F7F7F7" }}>
         <Grid celled="internally" columns="equal" stackable>
           <GridRow textAlign="center">
             <GridColumn style={{ paddingBottom: "5em", paddingTop: "5em" }}>
