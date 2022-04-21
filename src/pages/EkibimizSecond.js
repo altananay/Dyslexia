@@ -6,9 +6,10 @@ import {
   Image,
   Icon,
   Grid,
-  GridRow
+  GridRow,
+  MenuItem
 } from "semantic-ui-react";
-
+import "../css/Ekibimiz.css";
 export default function EkibimizSecond() {
   return (
     <div>
@@ -45,8 +46,9 @@ export default function EkibimizSecond() {
                     <h5>Okan AVCI</h5>
                   </Card.Header>
                   <Card.Description>
-                    <Icon name="linkedin" color="blue" size="big"></Icon>
-                    <Icon name="instagram" color="pink" size="big"></Icon>
+                    <MenuItem className="link" href="https://www.linkedin.com/in/okan-avc%C4%B1-b275771a5" target="_blank"><Icon name="linkedin" color="blue" size="big"></Icon></MenuItem>
+                    <MenuItem className="link" href="https://instagram.com/okan.aavci?igshid=YmMyMTA2M2Y=" target="_blank"><Icon name="instagram" color="pink" size="big"></Icon></MenuItem>
+                    
                   </Card.Description>
                 </Card.Content>
               </Card>
