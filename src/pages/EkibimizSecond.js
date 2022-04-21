@@ -48,7 +48,6 @@ export default function EkibimizSecond() {
                   <Card.Description>
                     <MenuItem className="link" href="https://www.linkedin.com/in/okan-avc%C4%B1-b275771a5" target="_blank"><Icon name="linkedin" color="blue" size="big"></Icon></MenuItem>
                     <MenuItem className="link" href="https://instagram.com/okan.aavci?igshid=YmMyMTA2M2Y=" target="_blank"><Icon name="instagram" color="pink" size="big"></Icon></MenuItem>
-                    
                   </Card.Description>
                 </Card.Content>
               </Card>
@@ -152,7 +151,7 @@ export default function EkibimizSecond() {
                 />
                 <Card.Content>
                   <Card.Header>
-                    <h5>Gamze Nur AKMEŞE</h5>
+                    <h5>Gamze AKMEŞE</h5>
                   </Card.Header>
                   <Card.Description>
                     <Icon name="linkedin" color="blue" size="big"></Icon>

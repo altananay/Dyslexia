@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Divider,
@@ -8,6 +8,13 @@ import EkibimizThird from "./EkibimizThird";
 
 export default function Hakkimizda() {
   const [hide, setHide] = useState(false);
+
+ 
+ useEffect(()=>{
+   if (window.innerWidth < 800) {
+     setHide(true);
+   }
+ })
 
   window.onresize = function () {
     if (window.innerWidth < 800) {
