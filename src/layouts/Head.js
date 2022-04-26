@@ -88,31 +88,6 @@ export default function Head() {
           </Slider>
         </Container>
       </Segment>
-      {/* <Container text>
-        <Slider {...settings}>
-          <div>
-            <img
-              src="/sld.jpg"
-              loading="lazy"
-              style={{ width: "80%", height:"50vh"}}
-            ></img>
-          </div>
-          <div>
-            <img
-              src="/sld2.jpg"
-              loading="lazy"
-              style={{ width: "80%", height:"50vh"}}
-            ></img>
-          </div>
-          <div>
-            <img
-              src="/sld.jpg"
-              loading="lazy"
-              style={{ width: "80%", height:"50vh"}}
-            ></img>
-          </div>
-        </Slider>
-      </Container> */}
 
       <Segment style={{ padding: "0em" }} basic>
         <Grid container stackable verticalAlign="middle">
