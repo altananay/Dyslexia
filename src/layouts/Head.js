@@ -1,29 +1,118 @@
 import React from "react";
+import Slider from "react-slick";
 import {
-  Button,
   Header,
   Segment,
-  Image,
   Grid,
   GridRow,
   GridColumn,
   Container,
   Divider,
 } from "semantic-ui-react";
+import "../css/Arrow.css";
 
 export default function Head() {
+  const settings = {
+    dots: true,
+    lazyLoad: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 2
+  };
+
   return (
     <div>
-      <Segment basic textAlign="center" vertical style={{ minHeight: 300 }}>
-        <Header as="h1" style={{ fontWeight: "normal" }}>
-          Disleksiler için Web Tabanlı Uygulama
-        </Header>
-        <Header as="h2" style={{ fontWeight: "normal" }}>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo
-        </Header>
-        <Button primary>Get Started</Button>
+      <Segment basic textAlign="center">
+        <Container text>
+          <Slider {...settings}>
+            <div>
+              <Segment
+                basic
+                textAlign="center"
+                vertical
+                style={{ minHeight: 200 }}
+              >
+                <Header
+                  as="h1"
+                  style={{ fontWeight: "normal", marginTop: "20px" }}
+                >
+                  Disleksiler için Web Tabanlı Uygulama
+                </Header>
+                <Header as="h2" style={{ fontWeight: "normal" }}>
+                  Dyslexia, disleksili insanlar için geliştirilmiş bir eğitim
+                  platformudur.
+                </Header>
+              </Segment>
+            </div>
+            <div>
+              <Segment
+                basic
+                textAlign="center"
+                vertical
+                style={{ minHeight: 200 }}
+              >
+                <Header
+                  as="h1"
+                  style={{ fontWeight: "normal", marginTop: "20px" }}
+                >
+                  Disleksiler için Web Tabanlı Uygulama
+                </Header>
+                <Header as="h2" style={{ fontWeight: "normal" }}>
+                  Dyslexia, Pamukkale Üniversitesi Yönetim Bilişim Sistemleri
+                  öğrencileri tarafından geliştirilmektedir.
+                </Header>
+              </Segment>
+            </div>
+            <div>
+              <Segment
+                basic
+                textAlign="center"
+                vertical
+                style={{ minHeight: 200 }}
+              >
+                <Header
+                  as="h1"
+                  style={{ fontWeight: "normal", marginTop: "20px" }}
+                >
+                  Disleksiler için Web Tabanlı Uygulama
+                </Header>
+                <Header as="h2" style={{ fontWeight: "normal" }}>
+                  Dyslexia, pratik ve basit eğitimler ile disleksili, özel
+                  öğrenme güçlüğüne sahip insanların yaşadığı sorunları
+                  azaltmayı amaçlamaktadır.
+                </Header>
+              </Segment>
+            </div>
+          </Slider>
+        </Container>
       </Segment>
+      {/* <Container text>
+        <Slider {...settings}>
+          <div>
+            <img
+              src="/sld.jpg"
+              loading="lazy"
+              style={{ width: "80%", height:"50vh"}}
+            ></img>
+          </div>
+          <div>
+            <img
+              src="/sld2.jpg"
+              loading="lazy"
+              style={{ width: "80%", height:"50vh"}}
+            ></img>
+          </div>
+          <div>
+            <img
+              src="/sld.jpg"
+              loading="lazy"
+              style={{ width: "80%", height:"50vh"}}
+            ></img>
+          </div>
+        </Slider>
+      </Container> */}
 
       <Segment style={{ padding: "0em" }} basic>
         <Grid container stackable verticalAlign="middle">
@@ -34,34 +123,27 @@ export default function Head() {
               </Header>
               <p style={{ fontSize: "1.33em", marginLeft: "10px" }}>
                 Bu platform, Disleksili bireyler ve aileler için geliştirilmiş
-                web tabanlı eğitim sitesidir. Test kısmında Vinegrad ve okuma
-                hatası testleri bulunmaktadır. Vinegrad testi daha çok
-                yetişkinlere yönelik bir testtir. Okuma hatası testi ise
-                çocuklara yönelik bir test olup, bir yetişkin ile birlikte
-                yapılması önerilir. Forum kısmında, aile veya disleksili birey
-                olarak duygu düşünceleriniz paylaşabileceğiniz başka bir
-                platform bulunmaktadır.
+                web tabanlı eğitim sitesidir. Forum kısmında, aile veya
+                disleksili birey olarak duygu düşünceleriniz paylaşabileceğiniz
+                başka bir platform bulunmaktadır.
               </p>
               <Header as="h3" style={{ fontSize: "2em", marginLeft: "10px" }}>
                 Neden Web Tabanlı Eğitim?
               </Header>
               <p style={{ fontSize: "1.33em", marginLeft: "10px" }}>
-                Okulda, her öğretmen maalesef ki sınıf yoğunluğundan öğrenci ile
-                bireysel olarak ilgilenememektedir. Genel olarak aileler
-                çocuklarını Özel eğitim kurumuna göndermekte veya bu alanda çok
-                az bulunan özel öğretmenlere başvurmaktadır . İnternetin de
-                yayılmasıyla bütün evlerde bulunan bilgisayar aracılığıyla
-                bireyler hiçbir sınır olmaksızın burada eğitici uygulamalara
-                erişim saglayabileceklerdir.
+                Genel olarak aileler çocuklarını Özel eğitim kurumuna
+                göndermekte veya bu alanda çok az bulunan özel öğretmenlere
+                başvurmaktadır. İnternetin de yayılmasıyla bütün evlerde bulunan
+                bilgisayar aracılığıyla
               </p>
             </Grid.Column>
             <Grid.Column floated="right" width={6}>
-              <Image
-                rounded
-                size="large"
+              <img
                 src="/logoWhite.jpg"
+                loading="lazy"
+                alt="logo"
                 style={{ marginLeft: "10px", marginBottom: "20px" }}
-              />
+              ></img>
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -92,7 +174,7 @@ export default function Head() {
         </Grid>
       </Segment>
 
-      <Segment style={{ padding: "4em 0em"}} vertical>
+      <Segment style={{ padding: "4em 0em" }} vertical>
         <Container text>
           <Header as="h3" style={{ fontSize: "2em" }}>
             Evde Eğitim İçin Neler Yapılabilir?
@@ -111,7 +193,7 @@ export default function Head() {
             horizontal
             style={{ margin: "3em 0em", textTransform: "uppercase" }}
           >
-            <a>Case Studies</a>
+            <a>Egitim</a>
           </Divider>
 
           <Header as="h3" style={{ fontSize: "2em" }}>

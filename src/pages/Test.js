@@ -42,7 +42,7 @@ export default function Test({...props}) {
               <Step.Title onClick={()=>isClicked(true)}>Vinegrad</Step.Title>
             </Step.Content>
           </Step>
-          <Step active>
+          <Step>
             <Icon name="book" color="yellow"/>
             <Step.Content>
               <Step.Title onClick={()=>isClicked2(true)}>Okuma Hatası</Step.Title>

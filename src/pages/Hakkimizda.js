@@ -13,8 +13,6 @@ export default function () {
   return (
     <div>
       <Container textAlign="justified">
-        <b>Disleksi Hakkında</b>
-        <Divider />
         <p>
           Disleksi, terimsel tanımıyla okuma güçlü olarak adlandırılır. Özel
           öğrenme güçlüğünün bir alt dalıdır fakat yaygın olarak görülen bir alt

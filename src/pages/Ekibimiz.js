@@ -29,8 +29,7 @@ export default function Hakkimizda() {
   return (
     <div>
       <Container textAlign="justified">
-        <b>Biz Kimiz</b>
-        <Divider />
+        <h3>Biz Kimiz</h3>
         <p>
           Pamukkale Üniversitesi Yönetim Bilişim Sistemleri 3. Sınıf öğrencileri
           olarak bilime ve teknolojiye gönül veren, yenilikleri çok sıkı takip

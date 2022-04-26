@@ -17,11 +17,10 @@ export default function EkibimizThird() {
           <GridRow only="mobile">
             <GridColumn>
               <Card>
-                <Image
+                <img
                   src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-                  wrapped
-                  ui={false}
-                />
+                  loading="lazy"
+                ></img>
                 <Card.Content>
                   <Card.Header>
                     <h5>Altan ANAY</h5>
@@ -35,11 +34,10 @@ export default function EkibimizThird() {
             </GridColumn>
             <GridColumn>
               <Card>
-                <Image
+                <img
                   src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-                  wrapped
-                  ui={false}
-                />
+                  loading="lazy"
+                ></img>
                 <Card.Content>
                   <Card.Header>
                     <h5>Okan AVCI</h5>
@@ -53,11 +51,10 @@ export default function EkibimizThird() {
             </GridColumn>
             <GridColumn style={{ marginTop: "20px" }}>
               <Card>
-                <Image
+                <img
                   src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-                  wrapped
-                  ui={false}
-                />
+                  loading="lazy"
+                ></img>
                 <Card.Content>
                   <Card.Header>
                     <h5>Cumhur Utku ATAK</h5>
@@ -71,11 +68,10 @@ export default function EkibimizThird() {
             </GridColumn>
             <GridColumn style={{ marginTop: "20px" }}>
               <Card>
-                <Image
+                <img
                   src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-                  wrapped
-                  ui={false}
-                />
+                  loading="lazy"
+                ></img>
                 <Card.Content>
                   <Card.Header>
                     <h5>Ahmet Suat DİRAV</h5>
@@ -89,11 +85,10 @@ export default function EkibimizThird() {
             </GridColumn>
             <GridColumn style={{ marginTop: "20px" }}>
               <Card>
-                <Image
+                <img
                   src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-                  wrapped
-                  ui={false}
-                />
+                  loading="lazy"
+                ></img>
                 <Card.Content>
                   <Card.Header>
                     <h5>Berkay ALİŞAN</h5>
@@ -107,11 +102,10 @@ export default function EkibimizThird() {
             </GridColumn>
             <GridColumn style={{ marginTop: "20px" }}>
               <Card>
-                <Image
+                <img
                   src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-                  wrapped
-                  ui={false}
-                />
+                  loading="lazy"
+                ></img>
                 <Card.Content>
                   <Card.Header>
                     <h5>Yusuf KEÇER</h5>
@@ -125,11 +119,10 @@ export default function EkibimizThird() {
             </GridColumn>
             <GridColumn style={{ marginTop: "20px" }}>
               <Card>
-                <Image
+                <img
                   src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-                  wrapped
-                  ui={false}
-                />
+                  loading="lazy"
+                ></img>
                 <Card.Content>
                   <Card.Header>
                     <h5>Ayşe BAYAM</h5>
@@ -143,14 +136,13 @@ export default function EkibimizThird() {
             </GridColumn>
             <GridColumn style={{ marginTop: "20px" }}>
               <Card>
-                <Image
+                <img
                   src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-                  wrapped
-                  ui={false}
-                />
+                  loading="lazy"
+                ></img>
                 <Card.Content>
                   <Card.Header>
-                    <h5>Gamze Nur AKMEŞE</h5>
+                    <h5>Gamze AKMEŞE</h5>
                   </Card.Header>
                   <Card.Description>
                     <Icon name="linkedin" color="blue" size="big"></Icon>

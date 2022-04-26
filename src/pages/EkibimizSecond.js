@@ -7,7 +7,7 @@ import {
   Icon,
   Grid,
   GridRow,
-  MenuItem
+  MenuItem,
 } from "semantic-ui-react";
 import "../css/Ekibimiz.css";
 export default function EkibimizSecond() {
@@ -18,11 +18,10 @@ export default function EkibimizSecond() {
           <GridRow>
             <GridColumn>
               <Card>
-                <Image
+                <img
                   src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-                  wrapped
-                  ui={false}
-                />
+                  loading="lazy"
+                ></img>
                 <Card.Content>
                   <Card.Header>
                     <h5>Altan ANAY</h5>
@@ -36,29 +35,39 @@ export default function EkibimizSecond() {
             </GridColumn>
             <GridColumn>
               <Card>
-                <Image
+                <img
                   src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-                  wrapped
-                  ui={false}
-                />
+                  loading="lazy"
+                ></img>
                 <Card.Content>
                   <Card.Header>
                     <h5>Okan AVCI</h5>
                   </Card.Header>
                   <Card.Description>
-                    <MenuItem className="link" href="https://www.linkedin.com/in/okan-avc%C4%B1-b275771a5" target="_blank"><Icon name="linkedin" color="blue" size="big"></Icon></MenuItem>
-                    <MenuItem className="link" href="https://instagram.com/okan.aavci?igshid=YmMyMTA2M2Y=" target="_blank"><Icon name="instagram" color="pink" size="big"></Icon></MenuItem>
+                    <MenuItem
+                      className="link"
+                      href="https://www.linkedin.com/in/okan-avc%C4%B1-b275771a5"
+                      target="_blank"
+                    >
+                      <Icon name="linkedin" color="blue" size="big"></Icon>
+                    </MenuItem>
+                    <MenuItem
+                      className="link"
+                      href="https://instagram.com/okan.aavci?igshid=YmMyMTA2M2Y="
+                      target="_blank"
+                    >
+                      <Icon name="instagram" color="pink" size="big"></Icon>
+                    </MenuItem>
                   </Card.Description>
                 </Card.Content>
               </Card>
             </GridColumn>
             <GridColumn>
               <Card>
-                <Image
+                <img
                   src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-                  wrapped
-                  ui={false}
-                />
+                  loading="lazy"
+                ></img>
                 <Card.Content>
                   <Card.Header>
                     <h5>Cumhur Utku ATAK</h5>
@@ -72,11 +81,10 @@ export default function EkibimizSecond() {
             </GridColumn>
             <GridColumn>
               <Card>
-                <Image
+                <img
                   src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-                  wrapped
-                  ui={false}
-                />
+                  loading="lazy"
+                ></img>
                 <Card.Content>
                   <Card.Header>
                     <h5>Ahmet Suat DİRAV</h5>
@@ -90,11 +98,10 @@ export default function EkibimizSecond() {
             </GridColumn>
             <GridColumn style={{ marginTop: "20px" }}>
               <Card>
-                <Image
+                <img
                   src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-                  wrapped
-                  ui={false}
-                />
+                  loading="lazy"
+                ></img>
                 <Card.Content>
                   <Card.Header>
                     <h5>Berkay ALİŞAN</h5>
@@ -108,11 +115,10 @@ export default function EkibimizSecond() {
             </GridColumn>
             <GridColumn style={{ marginTop: "20px" }}>
               <Card>
-                <Image
+                <img
                   src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-                  wrapped
-                  ui={false}
-                />
+                  loading="lazy"
+                ></img>
                 <Card.Content>
                   <Card.Header>
                     <h5>Yusuf KEÇER</h5>
@@ -126,11 +132,10 @@ export default function EkibimizSecond() {
             </GridColumn>
             <GridColumn style={{ marginTop: "20px" }}>
               <Card>
-                <Image
+                <img
                   src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-                  wrapped
-                  ui={false}
-                />
+                  loading="lazy"
+                ></img>
                 <Card.Content>
                   <Card.Header>
                     <h5>Ayşe BAYAM</h5>
@@ -144,11 +149,10 @@ export default function EkibimizSecond() {
             </GridColumn>
             <GridColumn style={{ marginTop: "20px" }}>
               <Card>
-                <Image
+                <img
                   src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-                  wrapped
-                  ui={false}
-                />
+                  loading="lazy"
+                ></img>
                 <Card.Content>
                   <Card.Header>
                     <h5>Gamze AKMEŞE</h5>

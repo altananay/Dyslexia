@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Grid, List, Header } from "semantic-ui-react";
+import { NavLink } from "react-router-dom";
+import { Container, Grid, List, Header, Icon } from "semantic-ui-react";
 
 export default function Footer() {
   return (
@@ -8,28 +9,24 @@ export default function Footer() {
             <Grid divided stackable >
               <Grid.Row style={{marginLeft:"20px"}}>
                 <Grid.Column width={3}>
-                  <Header as="h4" content="About" style={{color:"white"}}/>
-                  <List link>
-                    <List.Item as="a" style={{color:"gray"}}>Sitemap</List.Item>
-                    <List.Item as="a" style={{color:"gray"}}>Contact Us</List.Item>
-                    <List.Item as="a" style={{color:"gray"}}>Religious Ceremonies</List.Item>
-                    <List.Item as="a" style={{color:"gray"}}>Gazebo Plans</List.Item>
+                  <Header as="h4" content="Hakkımızda" style={{color:"white"}}/>
+                  <List>
+                    <List.Item as={NavLink} to="/disleksihakkinda" style={{color:"gray"}}>Disleksi Hakkında</List.Item>
+                    <List.Item as={NavLink} to="/ekibimiz" style={{color:"gray"}}>Ekibimiz</List.Item>
+                    <List.Item as={NavLink} to="/iletisim" style={{color:"gray"}}>İletişim</List.Item>
                   </List>
                 </Grid.Column>
                 <Grid.Column width={3}>
-                  <Header as="h4" content="About" style={{color:"white"}}/>
-                  <List link>
-                    <List.Item as="a" style={{color:"gray"}}>Sitemap</List.Item>
-                    <List.Item as="a" style={{color:"gray"}}>Contact Us</List.Item>
-                    <List.Item as="a" style={{color:"gray"}}>Religious Ceremonies</List.Item>
-                    <List.Item as="a" style={{color:"gray"}}>Gazebo Plans</List.Item>
+                  <Header as="h4" content="Testler" style={{color:"white"}}/>
+                  <List>
+                    <List.Item style={{color:"gray"}}>Vinegrad</List.Item>
+                    <List.Item style={{color:"gray"}}>Okuma Hatası</List.Item>
                   </List>
                 </Grid.Column>
-                <Grid.Column width={7}>
+                <Grid.Column width={7} >
                   <Header as="h4" style={{color:"white"}}>Telif Hakkı</Header>
                   <p style={{color:"gray"}}>
-                    Puip ekibi tarafından tasarlandı ve kodlandı. - Tüm hakları
-                    saklıdır.
+                    <Icon name="copyright outline"></Icon>2022 Disleksi - Tüm Hakları Saklıdır.
                   </p>
                 </Grid.Column>
               </Grid.Row>
