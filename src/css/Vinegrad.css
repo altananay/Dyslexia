@@ -59,3 +59,7 @@ button{
 
     border-radius: 24px;
 }
+
+.deneme:hover{
+    background: black;
+}

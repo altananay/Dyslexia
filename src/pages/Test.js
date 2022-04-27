@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Step, Icon, Table, Tab, Button } from "semantic-ui-react";
+import { Container, Step, Icon } from "semantic-ui-react";
 import Vinegrad from "./Vinegrad";
 import "../css/Vinegrad.css"
 import Reading from "./Reading";
@@ -43,7 +43,7 @@ export default function Test({...props}) {
             </Step.Content>
           </Step>
           <Step>
-            <Icon name="book" color="yellow"/>
+            <Icon name="book" color="yellow" onClick={()=>isClicked2(false)}/>
             <Step.Content>
               <Step.Title onClick={()=>isClicked2(true)}>Okuma Hatası</Step.Title>
             </Step.Content>

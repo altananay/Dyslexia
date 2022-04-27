@@ -19,8 +19,6 @@ export default function SingleCard({ card, handleChoice, flipped, disabled }) {
             onClick={() => handleClick()}
             alt="kart back" loading="lazy"
           ></img>
-          {/* <Card image={card.src} className="front"></Card>
-          <Card image="/img/cover.png" className="back" onClick={() => handleClick()}></Card> */}
         </div>
       </div>
     </div>
