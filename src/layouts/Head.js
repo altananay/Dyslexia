@@ -126,7 +126,7 @@ export default function Head() {
       <Segment style={{ padding: "0em", marginTop: "50px" }} basic>
         <Grid container stackable verticalAlign="middle">
           <Grid.Row>
-            <Grid.Column width={8}>
+            <Grid.Column width={7}>
               <Header as="h3" style={{ fontSize: "2em", marginLeft: "10px" }}>
                 Bu sitede neler bulunmakta?
               </Header>
@@ -146,12 +146,12 @@ export default function Head() {
                 bilgisayar aracılığıyla
               </p>
             </Grid.Column>
-            <Grid.Column floated="right" width={7}>
+            <Grid.Column floated="right" width={8}>
               <img
-                src="/kitap.png"
+                src="/mobile.png"
                 loading="lazy"
                 alt="logo"
-                style={{ marginLeft: "10px", marginBottom: "20px" }}
+                style={{ marginLeft: "10px", marginBottom: "20px"}}
               ></img>
             </Grid.Column>
           </Grid.Row>
