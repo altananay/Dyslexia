@@ -51,11 +51,11 @@ export default function Navi() {
             </Menu.Menu> */}
 
             <Menu.Item
-              name="Eğitimler"
-              active={activeItem === "Eğitimler"}
+              name="Uygulamalar"
+              active={activeItem === "Uygulamalar"}
               onClick={() => handleItemClick()}
               as={NavLink}
-              to="/egitimler"
+              to="/uygulamalar"
               style={{ marginBottom: "3px" }}
             />
             <Menu.Item

@@ -32,7 +32,7 @@ export default function Dashboard() {
               ></Route>
               <Route
                 exact
-                path="/egitimler"
+                path="/uygulamalar"
                 element={<Egitimler></Egitimler>}
               ></Route>
               

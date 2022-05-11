@@ -40,7 +40,7 @@ export default function Head() {
                   Disleksiler için Web Tabanlı Uygulama
                 </Header>
                 <Header as="h2" style={{ fontWeight: "normal" }}>
-                  Disleksi, disleksili insanlar için geliştirilmiş bir eğitim
+                  Disleksi, disleksili insanlar için geliştirilmiş bir uygulama
                   platformudur.
                 </Header>
               </Segment>
@@ -78,9 +78,9 @@ export default function Head() {
                   Disleksiler için Web Tabanlı Uygulama
                 </Header>
                 <Header as="h2" style={{ fontWeight: "normal" }}>
-                  Disleksi, pratik ve basit eğitimler ile disleksili, özel
-                  öğrenme güçlüğüne sahip insanların yaşadığı sorunları
-                  azaltmayı amaçlamaktadır.
+                  Disleksi, pratik ve basit uygulamalar ile disleksili, özel
+                  öğrenme güçlüğüne sahip insanların yaşadığı sorunlara
+                  yardımcı olmayı amaçlamaktadır.
                 </Header>
               </Segment>
             </div>
@@ -104,19 +104,17 @@ export default function Head() {
                 Bu sitede neler bulunmakta?
               </Header>
               <p style={{ fontSize: "1.33em", marginLeft: "10px" }}>
-                Bu platform, Disleksili bireyler ve aileler için geliştirilmiş
-                web tabanlı eğitim sitesidir. Forum kısmında, aile veya
-                disleksili birey olarak duygu düşünceleriniz paylaşabileceğiniz
-                başka bir platform bulunmaktadır.
+                Bu platform, Disleksili bireyler için geliştirilmiş web tabanlı
+                uygulama sitesidir. Forum kısmında, aile veya disleksili birey
+                olarak duygu düşünceleriniz paylaşabileceğiniz başka bir
+                platform bulunmaktadır.
               </p>
               <Header as="h3" style={{ fontSize: "2em", marginLeft: "10px" }}>
-                Neden Web Tabanlı Eğitim?
+                Neden Web Tabanlı Uygulama?
               </Header>
               <p style={{ fontSize: "1.33em", marginLeft: "10px" }}>
-                Genel olarak aileler çocuklarını Özel eğitim kurumuna
-                göndermekte veya bu alanda çok az bulunan özel öğretmenlere
-                başvurmaktadır. İnternetin de yayılmasıyla bütün evlerde bulunan
-                bilgisayar aracılığıyla
+                Geliştirdiğimiz web tabanlı uygulama sayesinde disleksili
+                bireylerin okul ve özel eğitim dışında kendini geliştirmeye devam edebileceği platform sağlıyoruz.
               </p>
             </Grid.Column>
           </Grid.Row>
@@ -128,22 +126,20 @@ export default function Head() {
           <Grid.Row>
             <Grid.Column width={7}>
               <Header as="h3" style={{ fontSize: "2em", marginLeft: "10px" }}>
-                Bu sitede neler bulunmakta?
+                Mobil Uygulamamız Hakkında
               </Header>
               <p style={{ fontSize: "1.33em", marginLeft: "10px" }}>
-                Bu platform, Disleksili bireyler ve aileler için geliştirilmiş
-                web tabanlı eğitim sitesidir. Forum kısmında, aile veya
-                disleksili birey olarak duygu düşünceleriniz paylaşabileceğiniz
-                başka bir platform bulunmaktadır.
+                Mobil uygulamamız IOS ve Android platformlarında yer alacaktır.
+                Mobil uygulamamız ve web sitemiz, birbirleriyle koordineli bir
+                şekilde geliştirilecektir.
               </p>
               <Header as="h3" style={{ fontSize: "2em", marginLeft: "10px" }}>
-                Neden Web Tabanlı Eğitim?
+                Mobil Uygulamamız
               </Header>
               <p style={{ fontSize: "1.33em", marginLeft: "10px" }}>
-                Genel olarak aileler çocuklarını Özel eğitim kurumuna
-                göndermekte veya bu alanda çok az bulunan özel öğretmenlere
-                başvurmaktadır. İnternetin de yayılmasıyla bütün evlerde bulunan
-                bilgisayar aracılığıyla
+                Web sitemizde bulunan uygulamalarımız mobil uygulamamızda da
+                bulunacaktır. Sitemize giren kullanıcılarımız dilerlerse mobil
+                uygulamamızdan da aynı işlemleri yapabilirler.
               </p>
             </Grid.Column>
             <Grid.Column floated="right" width={8}>
@@ -151,7 +147,7 @@ export default function Head() {
                 src="/mobile.png"
                 loading="lazy"
                 alt="logo"
-                style={{ marginLeft: "10px", marginBottom: "20px"}}
+                style={{ marginLeft: "10px", marginBottom: "20px" }}
               ></img>
             </Grid.Column>
           </Grid.Row>
@@ -189,21 +185,20 @@ export default function Head() {
             Testlerimiz
           </Header>
           <p style={{ fontSize: "1.33em" }}>
-            Test kısmında 2 adet farklı test bulunmaktadır. Bunlar; Vinegrad ve
-            Okuma Hatası testleridir. Vinegrad testi daha çok yetişkinlere
-            yönelik olup, sadece bilgilendirme amaçlı bir testtir. Yetişkin
-            bireylerin çözmesi önerilir. Okuma hatası testi ise, çocuklara
-            yönelik olup yetişkin bir bireyin gözlemi ile birlikte yapılması
-            önerilmektedir.
+            Test kısmında Vinegrad testi bulunmaktadır. Vinegrad testi daha çok
+            yetişkinlere yönelik olup, sadece bilgilendirme amaçlı bir testtir.
+            Yetişkin bireylerin çözmesi önerilir. Okul Öncesi ve Okuma Yazma
+            Bilen ilkokul öğrencileri için testlerimiz yapım aşamasındadır.
           </p>
 
           <Header as="h3" style={{ fontSize: "2em" }}>
-            Eğitimlerimiz
+            Uygulamalarımız
           </Header>
-          <p style={{ fontSize: "1.33em", marginBottom:"20px" }}>
-            Eğitimler kısmında yer alan Hafıza kartı eğitimi, disleksili bireyler
+          <p style={{ fontSize: "1.33em", marginBottom: "20px" }}>
+            Uygulamalar kısmında yer alan hafıza uygulaması; disleksili bireyler
             için hem görsel hem de hafıza anlamında gelişim sağlamaları için
-            hazırlanmıştır.
+            hazırlanmıştır. Farklı Kelime uygulamamız ise kelime haznesini
+            geliştirmek, kelime gruplarını oluşturmak amacıyla yapıldı.
           </p>
         </Container>
       </Segment>
