@@ -1,5 +1,8 @@
 import mongoose from "mongoose"
 
+let date = new Date();
+date = date.toLocaleString()
+
 const communicationSchema = mongoose.Schema({
     FirstName: {
         type: String,
@@ -14,7 +17,13 @@ const communicationSchema = mongoose.Schema({
         required: true
     },
     Description: {
-        type: Text,
+        type: String,
         required: true
+    },
+    SendedAt: {
+        type: String,
+        default: date
     }
 })
+
+export default mongoose.model("Communications", communicationSchema);

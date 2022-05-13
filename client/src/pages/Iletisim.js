@@ -1,5 +1,5 @@
 import { Form, Formik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import { toast } from "react-toastify";
 import {
   Button,
@@ -12,8 +12,17 @@ import {
 import * as Yup from "yup";
 import PTextArea from "../utilities/customFormControls/PTextArea";
 import PTextInput from "../utilities/customFormControls/PTextInput";
+import { addContact } from "../api/axios";
 
 export default function Iletisim() {
+
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    description: ""
+  })
+
   const initialValues = {
     firstName: "",
     lastName: "",
@@ -52,7 +61,12 @@ export default function Iletisim() {
           initialValues={initialValues}
           validationSchema={schema}
           onSubmit={(values) => {
-            toast.success("form gönderildi. !");
+            addContact(values).then(response => {
+              toast.success("form gönderildi. !");
+            }).catch(error => {
+              console.log(error.message);
+            })
+            
           }}
         >
           <Form className="ui form">
