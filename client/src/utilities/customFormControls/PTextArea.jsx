@@ -11,7 +11,7 @@ export default function PTextArea({...props}) {
         <FormField error={meta.touched && !!meta.error}>
             <TextArea {...field} {...props} style={{ minHeight: 100, marginTop:"15px", maxHeight:100 }}></TextArea>
             {meta.touched && !!meta.error ? (
-                <Label pointing basic color='red' content={meta.error}></Label>
+                <Label pointing basic color='red' content="Minimum 20 karakter olmalıdır."></Label>
             ):null}
         </FormField>
     </div>
