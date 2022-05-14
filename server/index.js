@@ -12,7 +12,7 @@ app.use(cors({credentials: true, origin: "https://disleksi.netlify.app/"}))
 app.use(express.json())
 app.use(communicationRouter);
 
-app.listen(5000, () => {
+app.listen(process.env.PORT, () => {
     mongoose.connect(process.env.CONNECTION_URL).then(() => {
         console.log("connected to mongodb...")
     }).catch(error => {
