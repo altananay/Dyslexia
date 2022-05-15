@@ -19,8 +19,7 @@ export default function Footer() {
                 <Grid.Column width={3}>
                   <Header as="h4" content="Testler" style={{color:"white"}}/>
                   <List>
-                    <List.Item style={{color:"gray"}}>Vinegrad</List.Item>
-                    <List.Item style={{color:"gray"}}>Okuma Hatası</List.Item>
+                    <List.Item as={NavLink} to="/vinegradbilgi" style={{color:"gray"}}>Vinegrad</List.Item>
                   </List>
                 </Grid.Column>
                 <Grid.Column width={7} >

@@ -147,7 +147,7 @@ export default function Head() {
                 src="/mobile.png"
                 loading="lazy"
                 alt="logo"
-                style={{ marginLeft: "10px", marginBottom: "20px" }}
+                style={{ marginLeft: "10px"}}
               ></img>
             </Grid.Column>
           </Grid.Row>
@@ -181,20 +181,20 @@ export default function Head() {
 
       <Segment vertical>
         <Container text>
-          <Header as="h3" style={{ fontSize: "2em" }}>
+          <Header as="h3" style={{ fontSize: "1.5em" }}>
             Testlerimiz
           </Header>
-          <p style={{ fontSize: "1.33em" }}>
+          <p style={{ fontSize: "1.22em" }}>
             Test kısmında Vinegrad testi bulunmaktadır. Vinegrad testi daha çok
             yetişkinlere yönelik olup, sadece bilgilendirme amaçlı bir testtir.
             Yetişkin bireylerin çözmesi önerilir. Okul Öncesi ve Okuma Yazma
             Bilen ilkokul öğrencileri için testlerimiz yapım aşamasındadır.
           </p>
 
-          <Header as="h3" style={{ fontSize: "2em" }}>
+          <Header as="h3" style={{ fontSize: "1.5em" }}>
             Uygulamalarımız
           </Header>
-          <p style={{ fontSize: "1.33em", marginBottom: "20px" }}>
+          <p style={{ fontSize: "1.22em", marginBottom: "20px" }}>
             Uygulamalar kısmında yer alan hafıza uygulaması; disleksili bireyler
             için hem görsel hem de hafıza anlamında gelişim sağlamaları için
             hazırlanmıştır. Farklı Kelime uygulamamız ise kelime haznesini

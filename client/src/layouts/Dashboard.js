@@ -10,6 +10,8 @@ import Iletisim from "../pages/Iletisim";
 import Egitimler from "../pages/Egitimler"
 import { ToastContainer } from "react-toastify";
 import Test from "../pages/Test";
+import KayitOl from "../pages/KayitOl";
+import VinegradBilgi from "../pages/VinegradBilgi";
 export default function Dashboard() {
   return (
     <div>
@@ -38,6 +40,8 @@ export default function Dashboard() {
               
               <Route exact path="/iletisim" element={<Iletisim></Iletisim>}></Route>
               <Route exact path="/test" element={<Test></Test>}></Route>
+              <Route exact path="/kayitol" element={<KayitOl></KayitOl>}></Route>
+              <Route exact path="/vinegradbilgi" element={<VinegradBilgi></VinegradBilgi>}></Route>
               <Route path="*" element={<NotFound></NotFound>}></Route>
             </Routes>
           </Grid.Column>
