@@ -18,7 +18,7 @@ router.post("/iletisim", async (req, res)=> {
         return res.status(201).json(createdContact);
     } catch (error) {
         console.log(error);
-        return res.json({message: "failed."});
+        return res.json({message: "hata."});
 
     }
 })

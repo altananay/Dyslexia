@@ -3,14 +3,17 @@ import dotenv from "dotenv"
 import mongoose from "mongoose"
 import cors from "cors"
 import communicationRouter from "./routers/communication.js"
+import userRouter from "./routers/user.js";
 
 dotenv.config()
 
 const app = express()
 
-app.use(cors({credentials: true, origin:"https://disleksi.netlify.app"}))
+//app.use(cors({credentials: true, origin:"https://disleksi.netlify.app"}))
+app.use(cors())
 app.use(express.json())
 app.use(communicationRouter);
+app.use(userRouter);
 
 app.listen(process.env.PORT, () => {
     mongoose.connect(process.env.CONNECTION_URL).then(() => {

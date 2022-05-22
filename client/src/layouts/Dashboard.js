@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid} from "semantic-ui-react";
 import { Route, Routes } from "react-router-dom";
 import Hakkimizda from "../pages/Hakkimizda";
@@ -12,14 +12,19 @@ import { ToastContainer } from "react-toastify";
 import Test from "../pages/Test";
 import KayitOl from "../pages/KayitOl";
 import VinegradBilgi from "../pages/VinegradBilgi";
+import GirisYap from "../pages/GirisYap";
 export default function Dashboard() {
+
+
+  const [user, setUser] = useState(null)
+
   return (
     <div>
       <ToastContainer position="bottom-right"></ToastContainer>
       <Grid>
         <Grid.Row>
           <Grid.Column>
-            <Navi></Navi>
+            <Navi user={user} setUser={setUser}></Navi>
             <Routes>
               <Route path="/" element={<Anasayfa></Anasayfa>}></Route>
               <Route
@@ -42,6 +47,7 @@ export default function Dashboard() {
               <Route exact path="/test" element={<Test></Test>}></Route>
               <Route exact path="/kayitol" element={<KayitOl></KayitOl>}></Route>
               <Route exact path="/vinegradbilgi" element={<VinegradBilgi></VinegradBilgi>}></Route>
+              <Route exact path="/girisyap" element={<GirisYap setUser={setUser}></GirisYap>}></Route>
               <Route path="*" element={<NotFound></NotFound>}></Route>
             </Routes>
           </Grid.Column>
