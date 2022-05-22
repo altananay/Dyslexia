@@ -37,10 +37,10 @@ export default function Iletisim() {
         <GridRow>
           <GridColumn width={16}>
             <Container text textAlign="center">
-              <Header as="h3" style={{ fontSize: "2em" }}>
+              <Header as="h3" style={{ fontSize: "2em", marginLeft:"20px" }}>
                 Sadece tek bir tık uzağınızdayız.
               </Header>
-              <p style={{ fontSize: "1.33em" }}>
+              <p style={{ fontSize: "1.33em", marginLeft: "20px" }}>
                 Web sitemiz hakkında öneri ve görüşlerinizi bizler ile
                 paylaşmanızdan mutluluk duyuyoruz. <br></br>
                 Öneri, görüşlerinizi bizlere aşağıdan gönderebilirsiniz.

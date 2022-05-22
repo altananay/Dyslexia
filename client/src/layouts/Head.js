@@ -96,23 +96,23 @@ export default function Head() {
                 src="/logoWhite.jpg"
                 loading="lazy"
                 alt="logo"
-                style={{ marginLeft: "10px", marginBottom: "20px" }}
+                style={{ marginLeft: "30px", marginBottom: "20px" }}
               ></img>
             </Grid.Column>
             <Grid.Column floated="right" width={8}>
-              <Header as="h3" style={{ fontSize: "2em", marginLeft: "10px" }}>
+              <Header as="h3" style={{ fontSize: "2em", marginLeft: "30px" }}>
                 Bu sitede neler bulunmakta?
               </Header>
-              <p style={{ fontSize: "1.33em", marginLeft: "10px" }}>
+              <p style={{ fontSize: "1.33em", marginLeft: "30px" }}>
                 Bu platform, Disleksili bireyler için geliştirilmiş web tabanlı
                 uygulama sitesidir. Forum kısmında, aile veya disleksili birey
                 olarak duygu düşünceleriniz paylaşabileceğiniz başka bir
                 platform bulunmaktadır.
               </p>
-              <Header as="h3" style={{ fontSize: "2em", marginLeft: "10px" }}>
+              <Header as="h3" style={{ fontSize: "2em", marginLeft: "30px" }}>
                 Neden Web Tabanlı Uygulama?
               </Header>
-              <p style={{ fontSize: "1.33em", marginLeft: "10px" }}>
+              <p style={{ fontSize: "1.33em", marginLeft: "30px" }}>
                 Geliştirdiğimiz web tabanlı uygulama sayesinde disleksili
                 bireylerin okul ve özel eğitim dışında kendini geliştirmeye devam edebileceği platform sağlıyoruz.
               </p>
@@ -125,18 +125,18 @@ export default function Head() {
         <Grid container stackable verticalAlign="middle">
           <Grid.Row>
             <Grid.Column width={7}>
-              <Header as="h3" style={{ fontSize: "2em", marginLeft: "10px" }}>
+              <Header as="h3" style={{ fontSize: "2em", marginLeft: "30px" }}>
                 Mobil Uygulamamız Hakkında
               </Header>
-              <p style={{ fontSize: "1.33em", marginLeft: "10px" }}>
+              <p style={{ fontSize: "1.33em", marginLeft: "30px" }}>
                 Mobil uygulamamız IOS ve Android platformlarında yer alacaktır.
                 Mobil uygulamamız ve web sitemiz, birbirleriyle koordineli bir
                 şekilde geliştirilecektir.
               </p>
-              <Header as="h3" style={{ fontSize: "2em", marginLeft: "10px" }}>
+              <Header as="h3" style={{ fontSize: "2em", marginLeft: "30px" }}>
                 Mobil Uygulamamız
               </Header>
-              <p style={{ fontSize: "1.33em", marginLeft: "10px" }}>
+              <p style={{ fontSize: "1.33em", marginLeft: "30px" }}>
                 Web sitemizde bulunan uygulamalarımız mobil uygulamamızda da
                 bulunacaktır. Sitemize giren kullanıcılarımız dilerlerse mobil
                 uygulamamızdan da aynı işlemleri yapabilirler.
@@ -147,14 +147,14 @@ export default function Head() {
                 src="/mobile.png"
                 loading="lazy"
                 alt="logo"
-                style={{ marginLeft: "10px"}}
+                style={{ marginLeft: "30px"}}
               ></img>
             </Grid.Column>
           </Grid.Row>
         </Grid>
       </Segment>
 
-      <Segment style={{ padding: "0em", backgroundColor: "#fffdd0" }}>
+      <Segment style={{ padding: "0em", backgroundColor: "#fffdd0", marginLeft:"20px" }}>
         <Grid celled="internally" columns="equal" stackable>
           <GridRow textAlign="center">
             <GridColumn style={{ paddingBottom: "5em", paddingTop: "5em" }}>
@@ -170,7 +170,7 @@ export default function Head() {
               <Header as="h3" style={{ fontSize: "2em" }}>
                 "Disleksinin Zeka ile İlgisi Yoktur"
               </Header>
-              <p style={{ fontSize: "1.33em" }}>
+              <p style={{ fontSize: "1.33em", marginLeft:"20px" }}>
                 Disleksi, zeka ile ilgisi olmayan bir rahatsızlıktır. Daha çok
                 hafızadan getirme problemidir.
               </p>

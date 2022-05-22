@@ -11,15 +11,15 @@ export default function Footer() {
                 <Grid.Column width={3}>
                   <Header as="h4" content="Hakkımızda" style={{color:"white"}}/>
                   <List>
-                    <List.Item as={NavLink} to="/disleksihakkinda" style={{color:"gray"}}>Disleksi Hakkında</List.Item>
-                    <List.Item as={NavLink} to="/ekibimiz" style={{color:"gray"}}>Ekibimiz</List.Item>
-                    <List.Item as={NavLink} to="/iletisim" style={{color:"gray"}}>İletişim</List.Item>
+                    <List.Item as={NavLink} to="/disleksihakkinda" style={{color:"gray", textDecoration: "none"}}>Disleksi Hakkında</List.Item>
+                    <List.Item as={NavLink} to="/ekibimiz" style={{color:"gray", textDecoration: "none"}}>Ekibimiz</List.Item>
+                    <List.Item as={NavLink} to="/iletisim" style={{color:"gray", textDecoration: "none"}}>İletişim</List.Item>
                   </List>
                 </Grid.Column>
                 <Grid.Column width={3}>
                   <Header as="h4" content="Testler" style={{color:"white"}}/>
                   <List>
-                    <List.Item as={NavLink} to="/vinegradbilgi" style={{color:"gray"}}>Vinegrad</List.Item>
+                    <List.Item as={NavLink} to="/vinegradbilgi" style={{color:"gray", textDecoration: "none"}}>Vinegrad</List.Item>
                   </List>
                 </Grid.Column>
                 <Grid.Column width={7} >

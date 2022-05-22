@@ -39,7 +39,7 @@ export default function Navi({ user, setUser }) {
                 as={NavLink}
                 to="/"
               >
-                <img src="/dys3.png"></img>
+                <img src="/dys3.png" loading="lazy"></img>
                 <span style={{ marginLeft: "10px" }}>Disleksi</span>
               </Menu.Item>
 

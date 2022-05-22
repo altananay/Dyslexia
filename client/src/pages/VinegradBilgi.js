@@ -24,14 +24,6 @@ export default function VinegradBilgi() {
           fakat testi çözen birey kendini baskı altında hissetmemesi ve rahat
           bir şekilde çözebilmesi için süre sınırı koyulmamıştır.
         </p>
-
-        <Container textAlign="center">
-          <img
-            src="/test2.png"
-            loading="lazy"
-            style={{ width: "600px", height: "380px" }}
-          ></img>
-        </Container>
         <Container textAlign="center" style={{ marginTop: "20px" }}>
           <Button as={NavLink} to="/test">
             Teste Git
