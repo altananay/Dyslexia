@@ -53,13 +53,13 @@ export default function Iletisim() {
         <Formik
           initialValues={initialValues}
           validationSchema={schema}
-          onSubmit={(values) => {
+          onSubmit={(values, {resetForm}) => {
             addContact(values).then(() => {
               toast.success("form gönderildi. !");
             }).catch(error => {
-              console.log(error.message);
+              toast.warning(error.response.data.message)
             })
-            
+            resetForm({values:""})
           }}
         >
           <Form className="ui form">
