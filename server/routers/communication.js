@@ -1,5 +1,4 @@
 import express from "express"
-import mongoose from "mongoose"
 import communication from "../models/communication.js"
 
 const router = express.Router();
