@@ -9,7 +9,7 @@ dotenv.config()
 
 const app = express()
 
-app.use(cors({credentials: true, origin:"https://disleksi.netlify.app"}))
+app.use(cors({credentials: true, origin:""}))
 //app.use(cors())
 app.use(express.json())
 app.use(communicationRouter);
