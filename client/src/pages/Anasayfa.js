@@ -4,7 +4,7 @@ import Head from '../layouts/Head'
 
 export default function Anasayfa() {
   return (
-    <div>
+    <div style={{backgroundColor: "#fffdd0"}}>
       <Head></Head>
       <Footer></Footer>
     </div>

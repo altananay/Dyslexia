@@ -32,7 +32,7 @@ export default function Iletisim() {
   });
 
   return (
-    <div>
+    <div style={{backgroundColor: "#fffdd0"}}>
       <Grid>
         <GridRow>
           <GridColumn width={16}>

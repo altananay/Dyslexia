@@ -27,7 +27,7 @@ export default function Hakkimizda() {
   };
 
   return (
-    <div>
+    <div style={{backgroundColor: "#fffdd0"}}>
       <Container textAlign="justified">
         <h3>Biz Kimiz</h3>
         <p>

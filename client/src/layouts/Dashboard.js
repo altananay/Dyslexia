@@ -14,6 +14,11 @@ import KayitOl from "../pages/KayitOl";
 import VinegradBilgi from "../pages/VinegradBilgi";
 import GirisYap from "../pages/GirisYap";
 import Bar from "./Bar";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import 'semantic-ui-css/semantic.min.css'
+import "./index.css"
+
 export default function Dashboard() {
   const [user, setUser] = useState(null);
 
@@ -131,12 +136,14 @@ export default function Dashboard() {
                   path="/girisyap"
                   element={<GirisYap setUser={setUser}></GirisYap>}
                 ></Route>
+
                 <Route path="*" element={<NotFound></NotFound>}></Route>
               </Routes>
             </Grid.Column>
           </Grid.Row>
         </Grid>
       )}
+      
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Step, Icon } from "semantic-ui-react";
 import FarkliKelime from "./FarkliKelime";
 import Memory from "./Memory";
+
 export default function Egitimler() {
   const [showMemory, setShowMemory] = useState(false);
   const [showKelime, setShowKelime] = useState(false);
@@ -17,7 +18,7 @@ export default function Egitimler() {
   }
 
   return (
-    <div>
+    <div style={{backgroundColor: "#fffdd0"}}>
       <Container textAlign="center">
         <Step.Group>
           <Step>
