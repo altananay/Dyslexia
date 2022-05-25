@@ -15,7 +15,7 @@ function Navbar() {
   const {dispatch} = useContext(DarkModeContext)
 
   return (
-    <div className='navbar'>
+    <div className='navbar2'>
       <div className="wrapper">
         <div className="search">
           <input type="text" placeholder='Search'/>

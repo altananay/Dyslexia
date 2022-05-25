@@ -9,13 +9,14 @@ import ListTable from './ListTable'
 import "./scss/Dark.scss"
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
-
+import { ToastContainer } from "react-toastify";
 const AdminPanel = () => {
 
   const {darkMode} = useContext(DarkModeContext)
 
   return (
     <div className={darkMode ? "home App dark" : "home App"}>
+      <ToastContainer position="bottom-right"></ToastContainer>
       <Sidebar></Sidebar>
       <div className="homeContainer">
         <Navbar></Navbar>

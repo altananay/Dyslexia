@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { Container, Grid, List, Header, Icon } from "semantic-ui-react";
 
+
 export default function Footer() {
   return (
     <div style={{backgroundColor : "#1B1C1D"}}>
@@ -15,6 +16,7 @@ export default function Footer() {
                     <List.Item as={NavLink} to="/ekibimiz" style={{color:"gray", textDecoration: "none"}}>Ekibimiz</List.Item>
                     <List.Item as={NavLink} to="/iletisim" style={{color:"gray", textDecoration: "none"}}>İletişim</List.Item>
                   </List>
+                  
                 </Grid.Column>
                 <Grid.Column width={3}>
                   <Header as="h4" content="Testler" style={{color:"white"}}/>

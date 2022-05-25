@@ -10,7 +10,7 @@ const New = () => {
       <div className="newContainer">
         <Navbar></Navbar>
         <div className="top">
-          <h1>Add new user</h1>
+          <h1 className="baslik">Add new user</h1>
         </div>
         <div className="bottom">
           <div className="left">

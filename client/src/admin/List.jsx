@@ -6,7 +6,7 @@ import Datatable from './Datatable'
 
 function List() {
   return (
-    <div className='list'>
+    <div className='list2'>
       <Sidebar></Sidebar>
       <div className="listContainer">
         <Navbar></Navbar>

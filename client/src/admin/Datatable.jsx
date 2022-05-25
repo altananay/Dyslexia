@@ -1,42 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./scss/Datatable.scss";
 import { DataGrid } from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
-
-
+import axios from "axios";
+import { fetchUsers } from "../api/axios";
 
 const columns = [
-  { field: "id", headerName: "ID", width: 70 },
-  { field: "firstName", headerName: "First name", width: 130 },
-  { field: "lastName", headerName: "Last name", width: 130 },
+  { field: "firstName", headerName: "First name", width: 100 },
+  { field: "lastName", headerName: "Last name", width: 100 },
   {
     field: "age",
     headerName: "Age",
     type: "number",
-    width: 90,
+    width: 50,
   },
-  {
-    field: "fullName",
-    headerName: "Full name",
-    description: "This column has a value getter and is not sortable.",
-    sortable: false,
-    width: 160,
-    valueGetter: (params) =>
-      `${params.row.firstName || ""} ${params.row.lastName || ""}`,
-  },
+  { field: "username", headerName: "User name", width: 100 },
+  { field: "grade", headerName: "Grade", width: 100 },
+  { field: "signedAt", headerName: "Kayıt tarihi", width: 200 },
+  { field: "email", headerName: "Email", width: 200 },
 ];
 
-const rows = [
-  { id: 1, lastName: "Anay", firstName: "Altan", age: 21 },
-  { id: 2, lastName: "Akmeşe", firstName: "Gamze Nur", age: 26 },
-  { id: 3, lastName: "Bayam", firstName: "Ayşe", age: 45 },
-  { id: 4, lastName: "Avcı", firstName: "Okab", age: 16 },
-  { id: 5, lastName: "Keçer", firstName: "Yusuf", age: null },
-  { id: 6, lastName: "Dirav", firstName: "Ahmet Suat", age: 150 },
-  { id: 7, lastName: "Atak", firstName: "Ferrara", age: 44 },
-  { id: 8, lastName: "Alişan", firstName: "Rossini", age: 36 },
+let rows = [
+  // { id: 1, lastName: "Anay", firstName: "Altan", age: 21 },
+  // { id: 2, lastName: "Akmeşe", firstName: "Gamze Nur", age: 26 },
+  // { id: 3, lastName: "Bayam", firstName: "Ayşe", age: 45 },
+  // { id: 4, lastName: "Avcı", firstName: "Okab", age: 16 },
+  // { id: 5, lastName: "Keçer", firstName: "Yusuf", age: null },
+  // { id: 6, lastName: "Dirav", firstName: "Ahmet Suat", age: 150 },
+  // { id: 7, lastName: "Atak", firstName: "Ferrara", age: 44 },
+  // { id: 8, lastName: "Alişan", firstName: "Rossini", age: 36 },
 ];
-
 
 
 const Datatable = () => {
@@ -46,6 +39,15 @@ const Datatable = () => {
   const handleDelete = (id) => {
     setData(data.filter(item=>item.id !== id));
   }
+
+  useEffect(() => {
+    fetchUsers().then(response => {
+      setData(response.data)
+      console.log(response.data)
+    }).catch(error => {
+      console.log(error.response.data.message);
+    })
+  }, [])
 
   const actionColumn = [
     {
@@ -59,7 +61,7 @@ const Datatable = () => {
               <div className="viewButton">View</div>
             </Link>
   
-            <div className="deleteButton" onClick={()=> handleDelete(params.row.id)}>Delete</div>
+            <div className="deleteButton">Delete</div>
           </div>
         );
       },
@@ -80,6 +82,7 @@ const Datatable = () => {
       </div>
       <div style={{ height: 600, width: "100%" }}>
         <DataGrid
+          getRowId={(data) => data._id}
           className="datagrid"
           rows={data}
           columns={columns.concat(actionColumn)}

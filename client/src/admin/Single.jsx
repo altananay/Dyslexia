@@ -14,7 +14,7 @@ function Single() {
         <div className="top">
           <div className="left">
             <div className="editButton">Edit</div>
-            <h1 className='title'>Information</h1>
+            <h1 className='title h1'>Information</h1>
             <div className="item">
               <h2>Altan ANAY</h2>
               <div className="details">

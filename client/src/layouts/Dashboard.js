@@ -16,7 +16,6 @@ import GirisYap from "../pages/GirisYap";
 import Bar from "./Bar";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import 'semantic-ui-css/semantic.min.css'
 import "./index.css"
 
 export default function Dashboard() {
@@ -43,7 +42,7 @@ export default function Dashboard() {
       <ToastContainer position="bottom-right"></ToastContainer>
       {hide ? (
         <div>
-          <Bar></Bar>
+          <Bar user={user} setUser={setUser}></Bar>
           <Grid>
             <Grid.Row>
               <Grid.Column>

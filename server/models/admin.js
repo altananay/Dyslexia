@@ -1,9 +1,9 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
 let date = new Date();
 date = date.toLocaleString()
 
-const userSchema = mongoose.Schema({
+const adminSchema = mongoose.Schema({
     username: {
         type: String,
         required: true
@@ -32,10 +32,6 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    grade: {
-        type: String,
-        required:true
-    },
     signedAt: {
         type: String,
         default: date
@@ -43,8 +39,8 @@ const userSchema = mongoose.Schema({
     userType: {
         type: String,
         enum: ['USER', 'ADMIN', "GUEST"],
-        default: 'USER'
+        default: 'ADMIN'
     }
 })
 
-export default mongoose.model('Users', userSchema)
+export default mongoose.model('Admins', adminSchema)

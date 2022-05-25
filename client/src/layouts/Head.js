@@ -10,6 +10,7 @@ import {
 } from "semantic-ui-react";
 import "../css/Arrow.css";
 
+
 export default function Head() {
   const settings = {
     dots: true,

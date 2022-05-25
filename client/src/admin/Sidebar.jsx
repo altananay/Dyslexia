@@ -26,12 +26,12 @@ function Sidebar() {
           <span className="logo">Bizleksi</span>
         </Link>
       </div>
-      <hr></hr>
+      <hr className="cizgi"></hr>
       <div className="center">
-        <ul>
+        <ul className="liste1">
           <p className="title">Main</p>
           <Link to="/admin" style={{textDecoration: "none"}}>
-            <li>
+            <li className="liste2">
               <DashboardIcon className="icon"></DashboardIcon>
               <span>Dashboard</span>
             </li>
@@ -39,51 +39,51 @@ function Sidebar() {
 
           <p className="title">Lists</p>
           <Link to="/admin/users" style={{ textDecoration: "none" }}>
-            <li>
+            <li className="liste2">
               <PersonIcon className="icon"></PersonIcon>
               <span>Users</span>
             </li>
           </Link>
-          <li>
+          <li className="liste2">
             <ProductionQuantityLimitsIcon className="icon"></ProductionQuantityLimitsIcon>
             <span>Products</span>
           </li>
-          <li>
+          <li className="liste2">
             <CreditScoreIcon className="icon"></CreditScoreIcon>
             <span>Orders</span>
           </li>
-          <li>
+          <li className="liste2">
             <LocalShippingIcon className="icon"></LocalShippingIcon>
             <span>Delivery</span>
           </li>
           <p className="title">Usefull</p>
-          <li>
+          <li className="liste2">
             <QueryStatsIcon className="icon"></QueryStatsIcon>
             <span>Stats</span>
           </li>
-          <li>
+          <li className="liste2">
             <NotificationsIcon className="icon"></NotificationsIcon>
             <span>Notifications</span>
           </li>
           <p className="title">Service</p>
-          <li>
+          <li className="liste2">
             <HealthAndSafetyIcon className="icon"></HealthAndSafetyIcon>
             <span>System Health</span>
           </li>
-          <li>
+          <li className="liste2">
             <PlaylistAddCheckCircleIcon className="icon"></PlaylistAddCheckCircleIcon>
             <span>Logs</span>
           </li>
-          <li>
+          <li className="liste2">
             <SettingsIcon className="icon"></SettingsIcon>
             <span>Settings</span>
           </li>
           <p className="title">User</p>
-          <li>
+          <li className="liste2">
             <AccountCircleIcon className="icon"></AccountCircleIcon>
             <span>Profile</span>
           </li>
-          <li>
+          <li className="liste2">
             <LogoutIcon className="icon"></LogoutIcon>
             <span>Logout</span>
           </li>
