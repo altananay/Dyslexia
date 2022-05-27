@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Message, Icon } from "semantic-ui-react";
+import { vinegradResult } from "../api/axios";
 
 export default function () {
   const [showFinalResults, setFinalResults] = useState(false);
@@ -172,7 +173,6 @@ export default function () {
     setScore(0);
   };
 
-
   const prevQuestion = () => {
     if (currentQuestion > 0) {
       setCurrentQuestion((currentQuestion -= 1));
@@ -184,6 +184,34 @@ export default function () {
       setCurrentQuestion((currentQuestion += 1));
     }
   };
+
+  function database() {
+    if (localStorage.length > 0) {
+      let user = JSON.parse(localStorage.getItem("user"));
+      const data = {
+        User: {
+          UserId: user._id,
+          username: user.username,
+          firstName: user.firstName,
+          lastName: user.lastName,
+          email: user.email,
+          age: user.age,
+          gender: user.gender,
+          grade: user.grade,
+          signedAt: user.signedAt
+        },
+        Result: score,
+      };
+
+      vinegradResult(data)
+        .then(() => {
+          
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  }
 
   return (
     <div>
@@ -204,7 +232,7 @@ export default function () {
             <h1>Sonuç</h1>
             <h2>
               Doğru cevap sayısı: {score} <br></br>
-              <button onClick={() => restartGame()}>Yeniden Başlat</button>
+              <button onClick={() => database()}>Yeniden Başlat</button>
             </h2>
           </div>
         ) : (

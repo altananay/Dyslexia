@@ -2,25 +2,30 @@ import React from "react";
 import "./scss/Sidebar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonIcon from "@mui/icons-material/Person";
-import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
 import CreditScoreIcon from "@mui/icons-material/CreditScore";
-import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import QueryStatsIcon from "@mui/icons-material/QueryStats";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
 import PlaylistAddCheckCircleIcon from "@mui/icons-material/PlaylistAddCheckCircle";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import MessageIcon from "@mui/icons-material/Message";
 import LogoutIcon from "@mui/icons-material/Logout";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
+import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 
-function Sidebar() {
+function Sidebar({admin, setAdmin}) {
   const { dispatch } = useContext(DarkModeContext);
 
+  const navigate = useNavigate()
+
   return (
+    
     <div className="sidebar">
+      <ToastContainer position="bottom-right"></ToastContainer>
       <div className="top">
         <Link to="/admin" style={{ textDecoration: "none" }}>
           <span className="logo">Bizleksi</span>
@@ -30,7 +35,7 @@ function Sidebar() {
       <div className="center">
         <ul className="liste1">
           <p className="title">Main</p>
-          <Link to="/admin" style={{textDecoration: "none"}}>
+          <Link to="/admin" style={{ textDecoration: "none" }}>
             <li className="liste2">
               <DashboardIcon className="icon"></DashboardIcon>
               <span>Dashboard</span>
@@ -41,20 +46,18 @@ function Sidebar() {
           <Link to="/admin/users" style={{ textDecoration: "none" }}>
             <li className="liste2">
               <PersonIcon className="icon"></PersonIcon>
-              <span>Users</span>
+              <span>Kullanıcılar</span>
             </li>
           </Link>
           <li className="liste2">
-            <ProductionQuantityLimitsIcon className="icon"></ProductionQuantityLimitsIcon>
-            <span>Products</span>
+            <Link to="/admin/messages" style={{ textDecoration: "none" }}>
+              <MessageIcon className="icon"></MessageIcon>
+              <span>Mesajlar</span>
+            </Link>
           </li>
           <li className="liste2">
             <CreditScoreIcon className="icon"></CreditScoreIcon>
-            <span>Orders</span>
-          </li>
-          <li className="liste2">
-            <LocalShippingIcon className="icon"></LocalShippingIcon>
-            <span>Delivery</span>
+            <span>Test Sonuçları</span>
           </li>
           <p className="title">Usefull</p>
           <li className="liste2">
@@ -67,8 +70,10 @@ function Sidebar() {
           </li>
           <p className="title">Service</p>
           <li className="liste2">
-            <HealthAndSafetyIcon className="icon"></HealthAndSafetyIcon>
-            <span>System Health</span>
+            <Link to="/admin/signup" style={{ textDecoration: "none" }}>
+              <PersonIcon className="icon"></PersonIcon>
+              <span>Admin Ekle</span>
+            </Link>
           </li>
           <li className="liste2">
             <PlaylistAddCheckCircleIcon className="icon"></PlaylistAddCheckCircleIcon>
@@ -83,7 +88,11 @@ function Sidebar() {
             <AccountCircleIcon className="icon"></AccountCircleIcon>
             <span>Profile</span>
           </li>
-          <li className="liste2">
+          <li className="liste2" onClick={() => {
+            localStorage.removeItem("admin")
+            toast.success("çıkış yapıldı.")
+            navigate("/")
+          }}>
             <LogoutIcon className="icon"></LogoutIcon>
             <span>Logout</span>
           </li>

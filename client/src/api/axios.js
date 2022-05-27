@@ -14,3 +14,11 @@ export const login = async (userData) => await HTTP.post("/girisyap", userData)
 export const adminSignUp = async (adminData) => await HTTP.post("/admin/signup", adminData);
 
 export const fetchUsers = async () => await HTTP.get("/admin/users")
+
+export const fetchDatas = async () => await HTTP.get("/admin")
+
+export const fetchMessages = async () => await HTTP.get("/admin/messages")
+
+export const adminLogin = async (adminData) => await HTTP.post("/admin/signin", adminData)
+
+export const vinegradResult = async (data) => await HTTP.post("/test", data);

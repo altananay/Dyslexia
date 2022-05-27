@@ -1,7 +1,9 @@
 import express from "express";
 import bcrypt from "bcryptjs";
+
 import User from "../models/user.js";
 import Admin from "../models/admin.js";
+import Communication from "../models/communication.js";
 
 const router = express.Router();
 
@@ -107,5 +109,48 @@ router.post("/admin/signup", async (req, res) => {
     return res.json({ message: "Kayıt olma işlemi başarısız." });
   }
 });
+
+
+router.get("/admin", async (req, res)=> {
+  try {
+    let datas = {}
+    const userCount = await User.collection.countDocuments();
+    const messageCount = await Communication.collection.countDocuments()
+    datas = {
+      userCount : userCount,
+      messageCount: messageCount
+    }
+    res.status(200).json(datas);
+
+  } catch (error) {
+    return res.json({message : "Hata"})
+  }
+})
+
+router.get("/admin/messages", async (req, res)=> {
+  try {
+    const messages = await Communication.find()
+    res.status(200).json(messages);
+  } catch (error) {
+    return res.json({message : "Hata"})
+  }
+})
+
+router.post("/admin/signin", async (req,res) => {
+  try {
+    const { username, password } = req.body;
+    const admin = await Admin.findOne({ username });
+    if (!admin)
+      return res.status(400).json({ message: "Kullanıcı adı hatalı." });
+
+    const isPasswordCorrect = await bcrypt.compare(password, admin.password);
+    if (!isPasswordCorrect)
+      return res.status(400).json({ message: "Şifre yanlış." });
+
+    return res.status(200).json({ admin, message: "Giriş Başarılı." });
+  } catch (error) {
+    return res.status(400).json({ message: error.message });
+  }
+})
 
 export default router;

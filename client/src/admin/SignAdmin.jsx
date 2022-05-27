@@ -55,7 +55,7 @@ const SignAdmin = () => {
         <Navbar></Navbar>
         <Container text textAlign="center">
           <Header as="h3" style={{ fontSize: "2em" }}>
-            Kayıt Ol
+            Admin Kaydet
           </Header>
           <Formik
             initialValues={initialValues}

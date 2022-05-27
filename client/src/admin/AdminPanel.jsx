@@ -1,42 +1,49 @@
-import React from 'react'
-import Sidebar from './Sidebar'
-import "./scss/Home.scss"
-import Navbar from './Navbar'
-import Widget from './Widget'
-import Featured from './Featured'
-import Chart from './Chart'
-import ListTable from './ListTable'
-import "./scss/Dark.scss"
+import React, { useEffect } from "react";
+import Sidebar from "./Sidebar";
+import "./scss/Home.scss";
+import Navbar from "./Navbar";
+import WidgetUser from "./WidgetUser";
+import Featured from "./Featured";
+import Chart from "./Chart";
+import ListTable from "./ListTable";
+import "./scss/Dark.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
 import { ToastContainer } from "react-toastify";
-const AdminPanel = () => {
+const AdminPanel = ({ admin, setAdmin }) => {
+  const { darkMode } = useContext(DarkModeContext);
 
-  const {darkMode} = useContext(DarkModeContext)
+  useEffect(() => {
+    if (localStorage.getItem("admin") && !admin) {
+      setAdmin(JSON.parse(localStorage.getItem("admin")));
+    }
+  }, [admin]);
 
   return (
-    <div className={darkMode ? "home App dark" : "home App"}>
-      <ToastContainer position="bottom-right"></ToastContainer>
-      <Sidebar></Sidebar>
-      <div className="homeContainer">
-        <Navbar></Navbar>
-        <div className="widgets">
-          <Widget type="user"></Widget>
-          <Widget type="order"></Widget>
-          <Widget type="earning"></Widget>
-          <Widget type="balance"></Widget>
+   <div><ToastContainer position="bottom-right"></ToastContainer>
+      {admin ? (
+        <div className="home App">
+          <Sidebar admin={admin} setAdmin={admin}></Sidebar>
+          <div className="homeContainer">
+            <Navbar></Navbar>
+            <div className="widgets">
+              <WidgetUser></WidgetUser>
+            </div>
+            <div className="charts">
+              <Featured></Featured>
+              <Chart></Chart>
+            </div>
+            <div className="listContainer">
+              <div className="listTable">Latest Transactions</div>
+              <ListTable></ListTable>
+            </div>
+          </div>
         </div>
-        <div className="charts">
-          <Featured></Featured>
-          <Chart></Chart>
-        </div>
-        <div className="listContainer">
-          <div className="listTable">Latest Transactions</div>
-          <ListTable></ListTable>
-        </div>
-      </div>
-    </div>
-  )
-}
+      ) : (
+        <div>Yetkiniz Yok</div>
+      )}</div>
+      
+  );
+};
 
-export default AdminPanel
+export default AdminPanel;
