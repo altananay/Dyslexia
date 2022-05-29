@@ -22,7 +22,6 @@ const Datatable = () => {
 
   useEffect(() => {
     fetchMessages().then(response => {
-        console.log(response.data)
         setData(response.data)
     }).catch(error => {
         console.log(error);
@@ -34,7 +33,7 @@ const Datatable = () => {
       field: "action",
       headerName: "Action",
       width: 200,
-      renderCell: (params) => {
+      renderCell: () => {
         return (
           <div className="cellAction">
             <Link to="/admin/users/1" style={{ textDecoration: "none" }}>

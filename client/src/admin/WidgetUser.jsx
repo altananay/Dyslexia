@@ -7,11 +7,13 @@ const Widget = () => {
 
   let [userCount, setUserCount] = useState()
   let [messageCount, setMessageCount] = useState()
+  let [vinegradTestCount, setVinegradTestCount] = useState()
 
   useEffect(() => {
     fetchDatas().then(response => {
       setUserCount(response.data.userCount)
       setMessageCount(response.data.messageCount)
+      setVinegradTestCount(response.data.vinegradTestCount)
     }).catch(error => {
       console.log(error.data.response.message)
     })
@@ -42,9 +44,9 @@ const Widget = () => {
         </div>
       </div>
       <div className="left">
-        <span className="title">Yapılan Test Sayısı</span>
+        <span className="title">Yapılan Vinegrad Test Sayısı</span>
         <span className="counter" style={{ marginRight: "100px" }}>
-          Eklenecek
+          {vinegradTestCount}
         </span>
       </div>
       <div className="right">

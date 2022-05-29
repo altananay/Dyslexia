@@ -8,6 +8,8 @@ import Single from "./admin/Single";
 import SignAdmin from "./admin/SignAdmin";
 import List2 from "./admin/List2";
 import SignInAdmin from "./admin/SignInAdmin";
+import List3 from "./admin/List3";
+
 function App() {
   const [admin, setAdmin] = useState(null);
 
@@ -32,6 +34,7 @@ function App() {
             element={<SignAdmin></SignAdmin>}
           ></Route>
           <Route exact path="/admin/messages" element={<List2></List2>}></Route>
+          <Route exact path="/admin/vinegradtestresults" element={<List3></List3>}></Route>
           <Route path="*" element={<Dashboard></Dashboard>}></Route>
           <Route
             exact

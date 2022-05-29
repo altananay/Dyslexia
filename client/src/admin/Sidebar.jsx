@@ -17,13 +17,12 @@ import { DarkModeContext } from "./context/darkModeContext";
 import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 
-function Sidebar({admin, setAdmin}) {
+function Sidebar({ admin, setAdmin }) {
   const { dispatch } = useContext(DarkModeContext);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
-    
     <div className="sidebar">
       <ToastContainer position="bottom-right"></ToastContainer>
       <div className="top">
@@ -56,8 +55,10 @@ function Sidebar({admin, setAdmin}) {
             </Link>
           </li>
           <li className="liste2">
-            <CreditScoreIcon className="icon"></CreditScoreIcon>
-            <span>Test Sonuçları</span>
+            <Link to="/admin/vinegradtestresults" style={{textDecoration: "none"}}>
+              <CreditScoreIcon className="icon"></CreditScoreIcon>
+              <span>Test Sonuçları</span>
+            </Link>
           </li>
           <p className="title">Usefull</p>
           <li className="liste2">
@@ -88,11 +89,14 @@ function Sidebar({admin, setAdmin}) {
             <AccountCircleIcon className="icon"></AccountCircleIcon>
             <span>Profile</span>
           </li>
-          <li className="liste2" onClick={() => {
-            localStorage.removeItem("admin")
-            toast.success("çıkış yapıldı.")
-            navigate("/")
-          }}>
+          <li
+            className="liste2"
+            onClick={() => {
+              localStorage.removeItem("admin");
+              toast.success("çıkış yapıldı.");
+              navigate("/");
+            }}
+          >
             <LogoutIcon className="icon"></LogoutIcon>
             <span>Logout</span>
           </li>

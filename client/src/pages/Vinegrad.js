@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Message, Icon } from "semantic-ui-react";
 import { vinegradResult } from "../api/axios";
+import { toast } from "react-toastify";
+import "../css/Vinegrad.css"
 
 export default function () {
   const [showFinalResults, setFinalResults] = useState(false);
@@ -185,7 +187,7 @@ export default function () {
     }
   };
 
-  function database() {
+  const database = () => {
     if (localStorage.length > 0) {
       let user = JSON.parse(localStorage.getItem("user"));
       const data = {
@@ -202,13 +204,13 @@ export default function () {
         },
         Result: score,
       };
-
+      console.log(data);
       vinegradResult(data)
         .then(() => {
-          
+          toast.success("Test sonucu alındı.")
         })
         .catch((error) => {
-          console.log(error);
+          toast.warn(error.response.data.message);
         });
     }
   }
@@ -232,7 +234,11 @@ export default function () {
             <h1>Sonuç</h1>
             <h2>
               Doğru cevap sayısı: {score} <br></br>
-              <button onClick={() => database()}>Yeniden Başlat</button>
+              {score >= 8 ? <h5>Riskli durumdasınız. Disleksili birey olabilirsiniz. Doğru teşhis için lütfen uzman biriyle görüşün.</h5>: ""}
+              <button className="buton" onClick={() => {
+                database()
+                restartGame()
+              }}>Yeniden Başlat</button>
             </h2>
           </div>
         ) : (

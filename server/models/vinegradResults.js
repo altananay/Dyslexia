@@ -5,49 +5,33 @@ date = date.toLocaleString()
 
 
 const vinegradResultSchema = mongoose.Schema({
-    User: {
-        UserId: {
-            type: mongoose.Types.ObjectId,
-            ref: "Users",
-            required: true
-        },
-        username: {
-            type: String,
-            required: true
-        },
-        firstName: {
-            type: String,
-            required: true
-        },
-        lastName: {
-            type: String,
-            required: true
-        },
-        email: {
-            type: String,
-            required: true
-        },
-        age: {
-            type: String,
-            required: true
-        },
-        gender: {
-            type: String,
-            required: true
-        },
-        grade: {
-            type: String,
-            required: true
-        },
-        userType : {
-            type: String,
-            enum: ['USER', 'ADMIN', "GUEST"],
-            default: 'USER'
-        },
-        signedAt : {
-            type: String,
-            default: date
-        }
+    username: {
+        type: String,
+        required: true
+    },
+    firstName: {
+        type: String,
+        required: true
+    },
+    lastName: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
+    },
+    age: {
+        type: String,
+        required: true
+    },
+    gender: {
+        type: String,
+        required: true
+    },
+    grade: {
+        type: String,
+        required:true
     },
     Result : {
         type: Number,
@@ -56,7 +40,12 @@ const vinegradResultSchema = mongoose.Schema({
     FinishedAt: {
         type: String,
         default: date
-    }
+    },
+    userType: {
+        type: String,
+        enum: ['USER', 'ADMIN', "GUEST"],
+        default: 'USER'
+    },
 })
 
 export default mongoose.model("VinegradResults", vinegradResultSchema)

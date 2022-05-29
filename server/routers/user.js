@@ -4,6 +4,7 @@ import bcrypt from "bcryptjs";
 import User from "../models/user.js";
 import Admin from "../models/admin.js";
 import Communication from "../models/communication.js";
+import VinegradResults from "../models/vinegradResults.js";
 
 const router = express.Router();
 
@@ -116,9 +117,11 @@ router.get("/admin", async (req, res)=> {
     let datas = {}
     const userCount = await User.collection.countDocuments();
     const messageCount = await Communication.collection.countDocuments()
+    const vinegradTestCount = await VinegradResults.collection.countDocuments()
     datas = {
       userCount : userCount,
-      messageCount: messageCount
+      messageCount: messageCount,
+      vinegradTestCount: vinegradTestCount
     }
     res.status(200).json(datas);
 
