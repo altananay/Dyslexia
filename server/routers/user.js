@@ -1,5 +1,5 @@
 import express from "express";
-import bcrypt from "bcryptjs";
+import Cryptr from "cryptr";
 
 import User from "../models/user.js";
 import Admin from "../models/admin.js";
@@ -7,6 +7,8 @@ import Communication from "../models/communication.js";
 import VinegradResults from "../models/vinegradResults.js";
 
 const router = express.Router();
+
+let cryptr = new Cryptr("hashedPassword");
 
 // localhost:5000/users 'a yapılan post isteği
 router.post("/kayitol", async (req, res) => {
@@ -29,7 +31,7 @@ router.post("/kayitol", async (req, res) => {
         .status(400)
         .json({ message: "Kullanıcı adı daha önce alınmış." });
 
-    const hashedPassword = await bcrypt.hash(password, 10);
+    const hashedPassword = await cryptr.encrypt(password)
 
     const createdUser = await User.create({
       username,
@@ -56,8 +58,8 @@ router.post("/girisyap", async (req, res) => {
     if (!user)
       return res.status(400).json({ message: "Kullanıcı adı hatalı." });
 
-    const isPasswordCorrect = await bcrypt.compare(password, user.password);
-    if (!isPasswordCorrect)
+    const encode = cryptr.decrypt(user.password);
+    if (encode !== password)
       return res.status(400).json({ message: "Şifre yanlış." });
 
     return res.status(200).json({ user, message: "Giriş Başarılı." });
@@ -87,13 +89,18 @@ router.post("/admin/signup", async (req, res) => {
       age,
     } = req.body;
 
+    console.log(req.body);
+
     const userExists = await Admin.findOne({ username });
     if (userExists)
       return res
         .status(400)
         .json({ message: "Kullanıcı adı daha önce alınmış." });
 
-    const hashedPassword = await bcrypt.hash(password, 10);
+
+    
+    
+    const hashedPassword = await cryptr.encrypt(password);
 
     const createdUser = await Admin.create({
       username,
@@ -146,8 +153,8 @@ router.post("/admin/signin", async (req,res) => {
     if (!admin)
       return res.status(400).json({ message: "Kullanıcı adı hatalı." });
 
-    const isPasswordCorrect = await bcrypt.compare(password, admin.password);
-    if (!isPasswordCorrect)
+    const encode = cryptr.decrypt(admin.password);
+    if (encode !== password)
       return res.status(400).json({ message: "Şifre yanlış." });
 
     return res.status(200).json({ admin, message: "Giriş Başarılı." });
@@ -155,5 +162,41 @@ router.post("/admin/signin", async (req,res) => {
     return res.status(400).json({ message: error.message });
   }
 })
+
+router.get("/admin/userpasswords", async (req, res)=> {
+  try {
+
+    const users = await User.find().select("username password");
+    for(let i = 0; i < users.length; i++)
+    {
+      users[i].password = cryptr.decrypt(users[i].password);
+    }
+
+    return res.status(200).json(users);
+  } catch (error) {
+    return res.status(400).json({message : error.message})
+  }
+})
+
+//Veri tabanına kayıtlı olan herkesin şifresini "test" yapar.
+// router.get("/admin/userpasswords", async (req, res)=> {
+//   try {
+//     let sifre = "test";
+//     let hashSifre;
+//     const password = await User.find().select("username password");
+//     console.log(password);
+
+//     hashSifre = cryptr.encrypt(sifre);
+//     console.log(hashSifre);
+
+//     await User.updateMany({$set: {
+//       password: hashSifre
+//     }})
+
+//     return res.status(200).json({message: "basarili"})
+//   } catch (error) {
+//     return res.status(400).json({message : error.message})
+//   }
+// })
 
 export default router;

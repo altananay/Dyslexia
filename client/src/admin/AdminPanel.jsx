@@ -10,6 +10,8 @@ import "./scss/Dark.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
 import { ToastContainer } from "react-toastify";
+import NotFound from "../pages/NotFound";
+
 const AdminPanel = ({ admin, setAdmin }) => {
   const { darkMode } = useContext(DarkModeContext);
 
@@ -40,7 +42,7 @@ const AdminPanel = ({ admin, setAdmin }) => {
           </div>
         </div>
       ) : (
-        <div>Yetkiniz Yok</div>
+        <NotFound></NotFound>
       )}</div>
       
   );

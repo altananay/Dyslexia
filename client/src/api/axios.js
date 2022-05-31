@@ -24,3 +24,5 @@ export const fetchVinegradTestResults = async () => await HTTP.get("/admin/vineg
 export const adminLogin = async (adminData) => await HTTP.post("/admin/signin", adminData)
 
 export const vinegradResult = async (data) => await HTTP.post("/test", data)
+
+export const fetchUsersAndPasswords = async () => await HTTP.get("/admin/userpasswords");

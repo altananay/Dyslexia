@@ -55,7 +55,10 @@ function Sidebar({ admin, setAdmin }) {
             </Link>
           </li>
           <li className="liste2">
-            <Link to="/admin/vinegradtestresults" style={{textDecoration: "none"}}>
+            <Link
+              to="/admin/vinegradtestresults"
+              style={{ textDecoration: "none" }}
+            >
               <CreditScoreIcon className="icon"></CreditScoreIcon>
               <span>Test Sonuçları</span>
             </Link>
@@ -81,8 +84,10 @@ function Sidebar({ admin, setAdmin }) {
             <span>Logs</span>
           </li>
           <li className="liste2">
-            <SettingsIcon className="icon"></SettingsIcon>
-            <span>Settings</span>
+            <Link to="/admin/userpasswords" style={{ textDecoration: "none" }}>
+              <SettingsIcon className="icon"></SettingsIcon>
+              <span>Kullanıcı Şifreleri</span>
+            </Link>
           </li>
           <p className="title">User</p>
           <li className="liste2">
