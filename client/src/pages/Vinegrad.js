@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Message, Icon } from "semantic-ui-react";
+import { Message, Icon, Container } from "semantic-ui-react";
 import { vinegradResult } from "../api/axios";
 import { toast } from "react-toastify";
-import "../css/Vinegrad.css"
+import "../css/Vinegrad.css";
 
 export default function () {
   const [showFinalResults, setFinalResults] = useState(false);
@@ -200,81 +200,96 @@ export default function () {
           age: user.age,
           gender: user.gender,
           grade: user.grade,
-          signedAt: user.signedAt
+          signedAt: user.signedAt,
         },
         Result: score,
       };
-      console.log(data);
       vinegradResult(data)
         .then(() => {
-          toast.success("Test sonucu alındı.")
+          toast.success("Test sonucu alındı.");
         })
         .catch((error) => {
           toast.warn(error.response.data.message);
         });
     }
-  }
+  };
 
   return (
     <div>
-      <div className="App">
-        <h1>Vinegrad Test</h1>
-        {showMessage ? (
-          <Message
-            onDismiss={() => handleShow()}
-            content="Bu testler ön bilgilendirme amaçlı oluşturulmuştur. Doğru bir teşhis için uzman ile görüşmelisiniz."
-          ></Message>
-        ) : (
-          <div></div>
-        )}
+      <div style={{ textAlign: "center" }}>
+        <Container>
+          <h1>Vinegrad Test</h1>
+          {showMessage ? (
+            <Message
+              onDismiss={() => handleShow()}
+              content="Bu testler ön bilgilendirme amaçlı oluşturulmuştur. Doğru bir teşhis için uzman ile görüşmelisiniz."
+            ></Message>
+          ) : (
+            <div></div>
+          )}
 
-        <h2>Skor: {score} </h2>
-        {showFinalResults ? (
-          <div className="final-results">
-            <h1>Sonuç</h1>
-            <h2>
-              Doğru cevap sayısı: {score} <br></br>
-              {score >= 8 ? <h5>Riskli durumdasınız. Disleksili birey olabilirsiniz. Doğru teşhis için lütfen uzman biriyle görüşün.</h5>: ""}
-              <button className="buton" onClick={() => {
-                database()
-                restartGame()
-              }}>Yeniden Başlat</button>
-            </h2>
-          </div>
-        ) : (
-          <div className="question-card">
-            <Icon
-              name="arrow left"
-              size="big"
-              style={{ float: "left" }}
-              onClick={() => prevQuestion()}
-            ></Icon>
-            <Icon
-              name="arrow right"
-              size="big"
-              style={{ float: "right" }}
-              onClick={() => nextQuestion()}
-            ></Icon>
-            <h2>{currentQuestion + 1}. Soru</h2>
-            <h2>Toplam Soru Sayısı: {questions.length}</h2>
+          <h2>Skor: {score} </h2>
+          {showFinalResults ? (
+            <div className="final-results">
+              <h1>Sonuç</h1>
+              <h2>
+                Doğru cevap sayısı: {score} <br></br>
+                {score >= 8 ? (
+                  <h5>
+                    Riskli durumdasınız. Disleksili birey olabilirsiniz. Doğru
+                    teşhis için lütfen uzman biriyle görüşün.
+                  </h5>
+                ) : (
+                  ""
+                )}
+                <button
+                  className="buton"
+                  onClick={() => {
+                    database();
+                    restartGame();
+                  }}
+                >
+                  Yeniden Başlat
+                </button>
+              </h2>
+            </div>
+          ) : (
+            <div className="question-card">
+              <Icon
+                name="arrow left"
+                size="big"
+                style={{ float: "left" }}
+                onClick={() => prevQuestion()}
+              ></Icon>
+              <Icon
+                name="arrow right"
+                size="big"
+                style={{ float: "right" }}
+                onClick={() => nextQuestion()}
+              ></Icon>
+              <h2>{currentQuestion + 1}. Soru</h2>
+              <h2>Toplam Soru Sayısı: {questions.length}</h2>
 
-            <h3 className="question-text">{questions[currentQuestion].text}</h3>
+              <h3 className="question-text">
+                {questions[currentQuestion].text}
+              </h3>
 
-            <ul>
-              {questions[currentQuestion].options.map((option) => {
-                return (
-                  <li
-                    className="liste"
-                    onClick={() => optionClicked(option.isCorrect)}
-                    key={option.id}
-                  >
-                    {option.text}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        )}
+              <ul>
+                {questions[currentQuestion].options.map((option) => {
+                  return (
+                    <li
+                      className="liste"
+                      onClick={() => optionClicked(option.isCorrect)}
+                      key={option.id}
+                    >
+                      {option.text}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
+        </Container>
       </div>
     </div>
   );

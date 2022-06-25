@@ -7,10 +7,9 @@ import { signUp } from "../api/axios";
 import { Container, Header, Button, Label } from "semantic-ui-react";
 import Select from "react-select";
 import PPassword from "../utilities/customFormControls/PPassword";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function KayitOl() {
-
   const navigate = useNavigate();
 
   const options = [
@@ -46,12 +45,11 @@ export default function KayitOl() {
 
   const schema = Yup.object({
     username: Yup.string().required("kullanıcı adı zorunlu"),
-    password: Yup.string()
-      .required("şifre zorunlu")
-      .matches(
-        /^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/,
-        "En Az 8 Karakter, Bir Büyük Harf, Bir Küçük Harf, Bir Rakam ve Bir Özel Karakter İçermelidir"
-      ),
+    password: Yup.string().required("şifre zorunlu"),
+    // .matches(
+    //   /^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/,
+    //   "En Az 8 Karakter, Bir Büyük Harf, Bir Küçük Harf, Bir Rakam ve Bir Özel Karakter İçermelidir"
+    // ),
     passwordAgain: Yup.string()
       .oneOf([Yup.ref("password"), null], "Şifreler eşleşmeli")
       .required("Boş bırakılamaz."),
@@ -75,13 +73,17 @@ export default function KayitOl() {
           initialValues={initialValues}
           validationSchema={schema}
           onSubmit={(values, { resetForm }) => {
-            console.log(values)
-            signUp(values).then(() => {
-              toast.success("Başarıyla kayıt oldunuz. Giriş yap sayfasına yönlendiriliyorsunuz.");
-              navigate("/girisyap");
-            }).catch(error => {
-              toast.warn(error.response.data.message)
-            })
+            console.log(values);
+            signUp(values)
+              .then(() => {
+                toast.success(
+                  "Başarıyla kayıt oldunuz. Giriş yap sayfasına yönlendiriliyorsunuz."
+                );
+                navigate("/girisyap");
+              })
+              .catch((error) => {
+                toast.warn(error.response.data.message);
+              });
             resetForm({ values: "" });
           }}
         >

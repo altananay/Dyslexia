@@ -4,13 +4,11 @@ import {
   Container,
   Nav,
   NavDropdown,
-  Button,
   Row,
   Col,
 } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import "../css/Bar.css";
-import "../bootstrap.min.css";
 import { toast } from "react-toastify";
 export default function Bar({ user, setUser }) {
   return (
@@ -41,8 +39,8 @@ export default function Bar({ user, setUser }) {
                   <Nav.Link as={NavLink} to="/uygulamalar">
                     Uygulamalar
                   </Nav.Link>
-                  <Nav.Link as={NavLink} to="/test">
-                    Test
+                  <Nav.Link as={NavLink} to="/vinegrad">
+                    Vinegrad Testi
                   </Nav.Link>
                   <Nav.Link
                     href="https://www.suatdirav.com/Home/Index"
@@ -82,8 +80,8 @@ export default function Bar({ user, setUser }) {
                   <Nav.Link as={NavLink} to="/uygulamalar">
                     Uygulamalar
                   </Nav.Link>
-                  <Nav.Link as={NavLink} to="/test">
-                    Test
+                  <Nav.Link as={NavLink} to="/vinegrad">
+                    Vinegrad Testi
                   </Nav.Link>
                   <Nav.Link
                     href="https://www.suatdirav.com/Home/Index"

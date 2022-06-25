@@ -1,6 +1,5 @@
 import express from "express";
 import Cryptr from "cryptr";
-
 import User from "../models/user.js";
 import Admin from "../models/admin.js";
 import Communication from "../models/communication.js";
@@ -10,7 +9,6 @@ const router = express.Router();
 
 let cryptr = new Cryptr("hashedPassword");
 
-// localhost:5000/users 'a yapılan post isteği
 router.post("/kayitol", async (req, res) => {
   try {
     console.log(req.body);
@@ -50,7 +48,6 @@ router.post("/kayitol", async (req, res) => {
   }
 });
 
-// localhost:5000/users/signin POST request
 router.post("/girisyap", async (req, res) => {
   try {
     const { username, password } = req.body;

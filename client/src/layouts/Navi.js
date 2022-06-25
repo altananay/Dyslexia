@@ -73,11 +73,11 @@ export default function Navi({ user, setUser }) {
                 style={{ marginBottom: "3px" }}
               />
               <Menu.Item
-                name="Test"
+                name="Vinegrad Testi"
                 active={activeItem === "Test"}
                 onClick={() => handleItemClick()}
                 as={NavLink}
-                to="/test"
+                to="/vinegrad"
                 style={{ marginBottom: "3px" }}
               />
 
@@ -145,11 +145,11 @@ export default function Navi({ user, setUser }) {
                 style={{ marginBottom: "3px" }}
               />
               <Menu.Item
-                name="Test"
-                active={activeItem === "Test"}
+                name="Vinegrad Testi"
+                active={activeItem === "Vinegrad Testi"}
                 onClick={() => handleItemClick()}
                 as={NavLink}
-                to="/test"
+                to="/vinegrad"
                 style={{ marginBottom: "3px" }}
               />
 

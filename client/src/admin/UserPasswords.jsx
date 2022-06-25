@@ -6,7 +6,7 @@ import { fetchUsersAndPasswords } from "../api/axios";
 
 const columns = [
   { field: "username", headerName: "Kullanıcı Adı", width: 150 },
-  { field: "password", headerName: "Şifre", width: 100 }
+  { field: "password", headerName: "Şifre", width: 150 }
 ];
 
 let rows = [];

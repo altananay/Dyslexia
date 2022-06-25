@@ -1,0 +1,84 @@
+
+#puan_tablosu {
+  margin: 1px;
+  /* padding: 1%;
+        width: 25%;
+        height: 20%;*/
+  background-color: rgb(129, 215, 232);
+  border-radius: 10px;
+  right: 10px;
+  color: rgb(14, 13, 13);
+  position: absolute;
+  font-size: 1.5em;
+  display: none;
+}
+
+#puan_tablosu .dogruYanlıs {
+  text-align: center;
+  width: 50%;
+  float: left;
+}
+
+#puan_tablosu #d_sayisi,
+#y_sayisi {
+  text-align: right;
+  width: 40%;
+  float: left;
+}
+
+#puan_tablosu #skor {
+  font-size: 1em;
+  text-align: center;
+  width: 50%;
+  margin: 10px;
+  float: center;
+}
+#soru_kutusu {
+  margin: auto;
+  padding: 3px;
+  width: 40%;
+  height: 60%;
+  top: 25%;
+  position: relative;
+  background-color: rgb(238, 160, 244);
+  color: black;
+  border-radius: 30px;
+  box-shadow: 5px 8px rgb(237, 186, 186);
+  display: none;
+}
+#soru_kutusu #soru_metin {
+  font-size: 2em;
+  margin-top: 5%;
+  margin-bottom: 1%;
+  margin-right: 12px;
+  margin-left: 12px;
+  width: 80%;
+  border-radius: 10px;
+  text-align: center;
+  height: 50%;
+  padding: 4px;
+}
+#soru_kutusu #cevaplar {
+  text-align: center;
+  width: 90%;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#soru_kutusu #a_sikki,
+#b_sikki,
+#c_sikki,
+#d_sikki {
+  padding: 8px;
+  margin: 8px;
+  border-radius: 5px;
+  font-size: 2em;
+  line-height: 1.1em;
+  background-color: rgb(255, 160, 64);
+}
+.basla_btn {
+  margin-bottom: 20px;  
+  background-color: #67b0e1;
+  font-size: 2em;
+  border-radius: 50px;
+}

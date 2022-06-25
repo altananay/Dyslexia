@@ -9,14 +9,12 @@ import Anasayfa from "../pages/Anasayfa";
 import Iletisim from "../pages/Iletisim";
 import Egitimler from "../pages/Egitimler";
 import { ToastContainer } from "react-toastify";
-import Test from "../pages/Test";
 import KayitOl from "../pages/KayitOl";
 import VinegradBilgi from "../pages/VinegradBilgi";
 import GirisYap from "../pages/GirisYap";
 import Bar from "./Bar";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
 import "./index.css"
+import Vinegrad from "../pages/Vinegrad";
 
 export default function Dashboard() {
   const [user, setUser] = useState(null);
@@ -69,7 +67,7 @@ export default function Dashboard() {
                     path="/iletisim"
                     element={<Iletisim></Iletisim>}
                   ></Route>
-                  <Route exact path="/test" element={<Test></Test>}></Route>
+                  <Route exact path="/vinegrad" element={<Vinegrad></Vinegrad>}></Route>
                   <Route
                     exact
                     path="/kayitol"
@@ -119,7 +117,7 @@ export default function Dashboard() {
                   path="/iletisim"
                   element={<Iletisim></Iletisim>}
                 ></Route>
-                <Route exact path="/test" element={<Test></Test>}></Route>
+                <Route exact path="/vinegrad" element={<Vinegrad></Vinegrad>}></Route>
                 <Route
                   exact
                   path="/kayitol"

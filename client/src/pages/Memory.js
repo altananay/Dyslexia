@@ -91,7 +91,7 @@ export default function Memory() {
           ></SingleCard>
         ))}
       </div>
-      <p>Turns: {turns}</p>
+      <p>Deneme: {turns}</p>
     </div>
   );
 }

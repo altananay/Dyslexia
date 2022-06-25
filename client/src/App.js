@@ -22,27 +22,27 @@ function App() {
             path="/admin"
             element={<AdminPanel admin={admin} setAdmin={setAdmin}></AdminPanel>}
           ></Route>
-          <Route exact path="/admin/users" element={<List></List>}></Route>
-          <Route exact path="/admin/users/new" element={<New></New>}></Route>
+          <Route exact path="/admin/users" element={<List admin={admin} setAdmin={setAdmin}></List>}></Route>
+          <Route exact path="/admin/users/new" element={<New admin={admin} setAdmin={setAdmin}></New>}></Route>
           <Route
             exact
             path="/admin/users/:userId"
-            element={<Single></Single>}
+            element={<Single admin={admin} setAdmin={setAdmin}></Single>}
           ></Route>
           <Route
             exact
             path="/admin/signup"
-            element={<SignAdmin></SignAdmin>}
+            element={<SignAdmin admin={admin} setAdmin={setAdmin}></SignAdmin>}
           ></Route>
-          <Route exact path="/admin/messages" element={<List2></List2>}></Route>
-          <Route exact path="/admin/vinegradtestresults" element={<List3></List3>}></Route>
+          <Route exact path="/admin/messages" element={<List2 admin={admin} setAdmin={setAdmin}></List2>}></Route>
+          <Route exact path="/admin/vinegradtestresults" element={<List3 admin={admin} setAdmin={setAdmin}></List3>}></Route>
           
           <Route
             exact
             path="/admin/signin"
             element={<SignInAdmin setAdmin={setAdmin}></SignInAdmin>}
           ></Route>
-          <Route path="/admin/userpasswords" element={<List4></List4>}></Route>
+          <Route path="/admin/userpasswords" element={<List4 admin={admin} setAdmin={setAdmin}></List4>}></Route>
           <Route path="*" element={<Dashboard></Dashboard>}></Route>
         </Routes>
         
