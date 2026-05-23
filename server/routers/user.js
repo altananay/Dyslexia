@@ -1,37 +1,50 @@
 import express from "express";
 import Cryptr from "cryptr";
-import User from "../models/user.js";
-import Admin from "../models/admin.js";
-import Communication from "../models/communication.js";
-import VinegradResults from "../models/vinegradResults.js";
 
 const router = express.Router();
 
 let cryptr = new Cryptr("hashedPassword");
 
+// In-memory mock stores
+const mockUsers = [
+  {
+    _id: "mock_user_1",
+    username: "testuser",
+    firstName: "Test",
+    lastName: "User",
+    email: "test@example.com",
+    password: cryptr.encrypt("test"),
+    age: "10",
+    gender: "Erkek",
+    grade: "5",
+    signedAt: new Date(),
+  },
+];
+
+const mockAdmins = [
+  {
+    _id: "mock_admin_1",
+    username: "admin",
+    firstName: "Admin",
+    lastName: "User",
+    email: "admin@example.com",
+    password: cryptr.encrypt("admin"),
+    age: "30",
+    gender: "Erkek",
+  },
+];
+
 router.post("/kayitol", async (req, res) => {
   try {
-    console.log(req.body);
-    const {
-      username,
-      firstName,
-      lastName,
-      password,
-      email,
-      gender,
-      grade,
-      age,
-    } = req.body;
+    const { username, firstName, lastName, password, email, gender, grade, age } = req.body;
 
-    const userExists = await User.findOne({ username });
+    const userExists = mockUsers.find((u) => u.username === username);
     if (userExists)
-      return res
-        .status(400)
-        .json({ message: "Kullanıcı adı daha önce alınmış." });
+      return res.status(400).json({ message: "Kullanıcı adı daha önce alınmış." });
 
-    const hashedPassword = await cryptr.encrypt(password)
-
-    const createdUser = await User.create({
+    const hashedPassword = cryptr.encrypt(password);
+    const createdUser = {
+      _id: "mock_user_" + Date.now(),
       username,
       firstName,
       lastName,
@@ -40,8 +53,9 @@ router.post("/kayitol", async (req, res) => {
       age,
       gender,
       grade,
-    });
-
+      signedAt: new Date(),
+    };
+    mockUsers.push(createdUser);
     return res.status(201).json(createdUser);
   } catch (error) {
     return res.json({ message: "Kayıt olma işlemi başarısız." });
@@ -51,7 +65,7 @@ router.post("/kayitol", async (req, res) => {
 router.post("/girisyap", async (req, res) => {
   try {
     const { username, password } = req.body;
-    const user = await User.findOne({ username });
+    const user = mockUsers.find((u) => u.username === username);
     if (!user)
       return res.status(400).json({ message: "Kullanıcı adı hatalı." });
 
@@ -67,39 +81,26 @@ router.post("/girisyap", async (req, res) => {
 
 router.get("/admin/users", async (req, res) => {
   try {
-    const users = await User.find().select("firstName lastName age gender signedAt username grade email");
+    const users = mockUsers.map(({ firstName, lastName, age, gender, signedAt, username, grade, email }) => ({
+      firstName, lastName, age, gender, signedAt, username, grade, email,
+    }));
     res.status(200).json(users);
   } catch (error) {
-      res.status(404).json({message: error.message})
+    res.status(404).json({ message: error.message });
   }
 });
 
 router.post("/admin/signup", async (req, res) => {
   try {
-    const {
-      username,
-      firstName,
-      lastName,
-      password,
-      email,
-      gender,
-      age,
-    } = req.body;
+    const { username, firstName, lastName, password, email, gender, age } = req.body;
 
-    console.log(req.body);
-
-    const userExists = await Admin.findOne({ username });
+    const userExists = mockAdmins.find((a) => a.username === username);
     if (userExists)
-      return res
-        .status(400)
-        .json({ message: "Kullanıcı adı daha önce alınmış." });
+      return res.status(400).json({ message: "Kullanıcı adı daha önce alınmış." });
 
-
-    
-    
-    const hashedPassword = await cryptr.encrypt(password);
-
-    const createdUser = await Admin.create({
+    const hashedPassword = cryptr.encrypt(password);
+    const createdUser = {
+      _id: "mock_admin_" + Date.now(),
       username,
       firstName,
       lastName,
@@ -107,46 +108,39 @@ router.post("/admin/signup", async (req, res) => {
       password: hashedPassword,
       age,
       gender,
-    });
-
+    };
+    mockAdmins.push(createdUser);
     return res.status(201).json(createdUser);
   } catch (error) {
     return res.json({ message: "Kayıt olma işlemi başarısız." });
   }
 });
 
-
-router.get("/admin", async (req, res)=> {
+router.get("/admin", async (req, res) => {
   try {
-    let datas = {}
-    const userCount = await User.collection.countDocuments();
-    const messageCount = await Communication.collection.countDocuments()
-    const vinegradTestCount = await VinegradResults.collection.countDocuments()
-    datas = {
-      userCount : userCount,
-      messageCount: messageCount,
-      vinegradTestCount: vinegradTestCount
-    }
+    const datas = {
+      userCount: mockUsers.length,
+      messageCount: 0,
+      vinegradTestCount: 0,
+    };
     res.status(200).json(datas);
-
   } catch (error) {
-    return res.json({message : "Hata"})
+    return res.json({ message: "Hata" });
   }
-})
+});
 
-router.get("/admin/messages", async (req, res)=> {
+router.get("/admin/messages", async (req, res) => {
   try {
-    const messages = await Communication.find()
-    res.status(200).json(messages);
+    res.status(200).json([]);
   } catch (error) {
-    return res.json({message : "Hata"})
+    return res.json({ message: "Hata" });
   }
-})
+});
 
-router.post("/admin/signin", async (req,res) => {
+router.post("/admin/signin", async (req, res) => {
   try {
     const { username, password } = req.body;
-    const admin = await Admin.findOne({ username });
+    const admin = mockAdmins.find((a) => a.username === username);
     if (!admin)
       return res.status(400).json({ message: "Kullanıcı adı hatalı." });
 
@@ -158,42 +152,18 @@ router.post("/admin/signin", async (req,res) => {
   } catch (error) {
     return res.status(400).json({ message: error.message });
   }
-})
+});
 
-router.get("/admin/userpasswords", async (req, res)=> {
+router.get("/admin/userpasswords", async (req, res) => {
   try {
-
-    const users = await User.find().select("username password");
-    for(let i = 0; i < users.length; i++)
-    {
-      users[i].password = cryptr.decrypt(users[i].password);
-    }
-
+    const users = mockUsers.map((u) => ({
+      username: u.username,
+      password: cryptr.decrypt(u.password),
+    }));
     return res.status(200).json(users);
   } catch (error) {
-    return res.status(400).json({message : error.message})
+    return res.status(400).json({ message: error.message });
   }
-})
-
-//Veri tabanına kayıtlı olan herkesin şifresini "test" yapar.
-// router.get("/admin/userpasswords", async (req, res)=> {
-//   try {
-//     let sifre = "test";
-//     let hashSifre;
-//     const password = await User.find().select("username password");
-//     console.log(password);
-
-//     hashSifre = cryptr.encrypt(sifre);
-//     console.log(hashSifre);
-
-//     await User.updateMany({$set: {
-//       password: hashSifre
-//     }})
-
-//     return res.status(200).json({message: "basarili"})
-//   } catch (error) {
-//     return res.status(400).json({message : error.message})
-//   }
-// })
+});
 
 export default router;

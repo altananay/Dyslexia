@@ -1,24 +1,21 @@
 import express from "express"
-import communication from "../models/communication.js"
 
 const router = express.Router();
 
 router.post("/iletisim", async (req, res)=> {
     try {
         const {firstName, lastName, email, description} = req.body;
-        console.log(req.body);
-        const createdContact = await communication.create({
+        const createdContact = {
+            _id: "mock_msg_" + Date.now(),
             FirstName: firstName,
             LastName: lastName,
             Email: email,
-            Description: description
-        })
-
+            Description: description,
+            createdAt: new Date()
+        };
         return res.status(201).json(createdContact);
     } catch (error) {
-        console.log(error);
         return res.json({message: "hata."});
-
     }
 })
 
