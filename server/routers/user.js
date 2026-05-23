@@ -81,8 +81,8 @@ router.post("/girisyap", async (req, res) => {
 
 router.get("/admin/users", async (req, res) => {
   try {
-    const users = mockUsers.map(({ firstName, lastName, age, gender, signedAt, username, grade, email }) => ({
-      firstName, lastName, age, gender, signedAt, username, grade, email,
+    const users = mockUsers.map(({ _id, firstName, lastName, age, gender, signedAt, username, grade, email }) => ({
+      _id, firstName, lastName, age, gender, signedAt, username, grade, email,
     }));
     res.status(200).json(users);
   } catch (error) {

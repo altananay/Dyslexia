@@ -83,12 +83,7 @@ function Sidebar({ admin, setAdmin }) {
             <PlaylistAddCheckCircleIcon className="icon"></PlaylistAddCheckCircleIcon>
             <span>Logs</span>
           </li>
-          <li className="liste2">
-            <Link to="/admin/userpasswords" style={{ textDecoration: "none" }}>
-              <SettingsIcon className="icon"></SettingsIcon>
-              <span>Kullanıcı Şifreleri</span>
-            </Link>
-          </li>
+
           <p className="title">User</p>
           <li className="liste2">
             <AccountCircleIcon className="icon"></AccountCircleIcon>

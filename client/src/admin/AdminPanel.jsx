@@ -24,7 +24,7 @@ const AdminPanel = ({ admin, setAdmin }) => {
   return (
    <div><ToastContainer position="bottom-right"></ToastContainer>
       {admin ? (
-        <div className="home App">
+        <div className={`home App${darkMode ? " dark" : ""}`}>
           <Sidebar admin={admin} setAdmin={admin}></Sidebar>
           <div className="homeContainer">
             <Navbar></Navbar>

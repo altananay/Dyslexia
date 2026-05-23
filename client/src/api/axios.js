@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const HTTP = axios.create({
-    baseURL: ""
+    baseURL: "http://localhost:3001"
 })
 
 export const addContact = async (formData) => await HTTP.post("/iletisim", formData)

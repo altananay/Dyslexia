@@ -14,15 +14,11 @@ const SignInAdmin = ({ admin, setAdmin }) => {
   const initialValues = {
     username: "",
     password: "",
-    passwordAgain: "",
   };
 
   const schema = Yup.object({
     username: Yup.string().required("kullanıcı adı zorunlu"),
     password: Yup.string().required("şifre zorunlu"),
-    passwordAgain: Yup.string()
-      .oneOf([Yup.ref("password"), null], "Şifreler eşleşmeli")
-      .required("Boş bırakılamaz."),
   });
 
   return (
@@ -54,11 +50,6 @@ const SignInAdmin = ({ admin, setAdmin }) => {
             ></PTextInput>
             <div style={{ marginTop: "15px" }}></div>
             <PPassword name="password" placeholder="Şifreyi Girin"></PPassword>
-            <div style={{ marginTop: "15px" }}></div>
-            <PPassword
-              name="passwordAgain"
-              placeholder="Şifreyi tekrar girin"
-            ></PPassword>
             <Button color="green" type="submit" style={{ marginTop: "15px" }}>
               Giriş Yap
             </Button>
